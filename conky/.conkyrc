@@ -1,0 +1,8 @@
+out_to_x no
+out_to_console yes
+total_run_times 0
+
+update_interval 5 
+
+TEXT
+Host: $nodename | Kernel: $kernel | Root: ${fs_used_perc /}% | IP: ${addr eth0} | CPU-Temp: ${ibm_temps 0}°C | GPU-Temp: ${ibm_temps 3}°C | Fan: ${ibm_fan} rpm | RAM: ${memperc}% | CPU-Load: ${cpu cpu0}% | Battery: ${battery_percent} | ${time %d.%m.%y %H:%M} 
