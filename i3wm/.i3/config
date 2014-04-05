@@ -1,30 +1,10 @@
-# Autostart-Applications:
-exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-exec --no-startup-id urxvtd
-exec --no-startup-id twmnd
-exec --no-startup-id feh --bg-center ~/.background.jpg
-
-# Set modifier key variables
 set $mod Mod4
 set $alt Mod1
 
-# font for window titles 
-font -*-terminus-medium-r-normal-*-12-120-72-72-c-60-iso10646-1
-
-# Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-bindsym $mod+Return exec urxvtc 
-bindsym $alt+Return exec gvim 
-
-# kill focused window
 bindsym $mod+Shift+Q kill
 
-# start dmenu
-bindsym $mod+space exec --no-startup-id dmenu_run
-bindsym $alt+space exec --no-startup-id passman fillbrowser
-
-# change focus
 bindsym $mod+h focus left
 bindsym $mod+j focus down
 bindsym $mod+k focus up
@@ -35,7 +15,6 @@ bindsym $mod+Down focus down
 bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
-# move focused window
 bindsym $mod+Shift+H move left
 bindsym $mod+Shift+J move down
 bindsym $mod+Shift+K move up
@@ -46,30 +25,19 @@ bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
-# split in horizontal orientation
 bindsym $mod+y split h
-
-# split in vertical orientation
 bindsym $mod+x split v
-
-# enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen
 
-# change container layout (stacked, tabbed, default)
 bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
 bindsym $mod+e layout default
 
-# toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
 
-# focus the parent container
 bindsym $mod+a focus parent
-
-# focus the child container
 bindsym $mod+d focus child
 
-# switch to workspace
 bindsym $mod+1 workspace 1
 bindsym $mod+2 workspace 2
 bindsym $mod+3 workspace 3
@@ -85,7 +53,6 @@ bindsym Control+Mod1+Right workspace next_on_output
 bindsym Control+Mod1+Left  workspace prev_on_output 
 bindsym Control+Mod1+Down  move workspace to output right
 
-# move focused container to workspace
 bindsym $mod+Shift+exclam move container to workspace 1
 bindsym $mod+Shift+quotedbl move container to workspace 2
 bindsym $mod+Shift+section move container to workspace 3
@@ -97,12 +64,10 @@ bindsym $mod+Shift+parenleft move container to workspace 8
 bindsym $mod+Shift+parenright move container to workspace 9
 bindsym $mod+Shift+equal move container to workspace 10
 
-# control i3 execution
 bindsym $mod+Shift+C reload
 bindsym $mod+Shift+R restart
 bindsym $mod+Shift+E exit
 
-# resize window
 mode "resize" {
 	bindsym h resize shrink width 10 px or 10 ppt
 	bindsym j resize grow height 10 px or 10 ppt
@@ -120,7 +85,6 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-# configure i3bar
 bar {
 	status_command conky 
 	workspace_buttons yes
@@ -137,13 +101,13 @@ bar {
 }
 
 
-# Colors
+font -*-terminus-medium-r-normal-*-12-120-72-72-c-60-iso10646-1
+
 client.focused #cb4b16 #cb4b16 #fdf6e3
 client.focused_inactive #657b83 #657b83 #fdf6e3
 client.unfocused #586e75 #586e75 #eee8d5
 client.urgent #dc322f #dc322f #fdf6e3
 
-# Custom-Windows
 for_window [class="Xfce4-notifyd"] floating enable; border none
 for_window [class="Arandr"] floating enable
 for_window [class="Sonata"] floating enable
@@ -151,7 +115,17 @@ for_window [class="Chromium"] border none
 for_window [class="Thunderbird"] border none
 for_window [class="Firefox"] border none
 
-# Custom shortcuts
-bindsym Mod1+l exec --no-startup-id i3lock -c 000000 
-bindsym control+Mod1+l exec --no-startup-id sh ~/.screenlayout/laptop.sh
+bindsym $mod+Return exec urxvtc 
+bindsym $alt+Return exec gvim 
+
+bindsym $mod+space exec --no-startup-id dmenu_run
+bindsym $alt+space exec --no-startup-id passman fillbrowser
+
+bindsym control+Mod1+l exec --no-startup-id i3lock -c 000000 
+bindsym control+Mod1+m exec --no-startup-id sh ~/.screenlayout/laptop.sh
 bindsym control+Mod1+d exec --no-startup-id sh ~/.screenlayout/docking.sh
+
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+exec --no-startup-id urxvtd
+exec --no-startup-id twmnd
+exec --no-startup-id feh --bg-center ~/.background.jpg
