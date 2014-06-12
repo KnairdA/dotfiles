@@ -108,9 +108,6 @@ client.focused_inactive #657b83 #657b83 #fdf6e3
 client.unfocused #586e75 #586e75 #eee8d5
 client.urgent #dc322f #dc322f #fdf6e3
 
-for_window [class="Xfce4-notifyd"] floating enable; border none
-for_window [class="Arandr"] floating enable
-for_window [class="Sonata"] floating enable
 for_window [class="Chromium"] border none
 for_window [class="Thunderbird"] border none
 for_window [class="Firefox"] border none
@@ -122,10 +119,8 @@ bindsym $mod+space exec --no-startup-id dmenu_run
 bindsym $alt+space exec --no-startup-id passman fillbrowser
 
 bindsym control+Mod1+l exec --no-startup-id i3lock -c 000000 
-bindsym control+Mod1+m exec --no-startup-id sh ~/.screenlayout/laptop.sh
-bindsym control+Mod1+d exec --no-startup-id sh ~/.screenlayout/docking.sh
 
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id urxvtd
-exec --no-startup-id twmnd
+exec --no-startup-id nm-applet
 exec --no-startup-id feh --bg-center ~/.background.jpg

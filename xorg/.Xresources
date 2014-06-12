@@ -2,7 +2,7 @@ URxvt.foreground: white
 URxvt.background: black
 URxvt.scrollBar: false
 URxvt.transparent: false
-URxvt.font: xft:monospace:size=8
+URxvt.font: xft:Droid Sans Mono:size=8
 URxvt.perl-ext-common:  vtwheel,matcher,clipboard
 URxvt.saveLines: 10000
 URxvt.inheritPixmap: false
