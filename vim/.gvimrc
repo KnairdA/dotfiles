@@ -5,7 +5,7 @@ set guioptions-=m
 set guioptions-=T
 set guioptions-=e
 
-set guifont=Monospace\ 8
+set guifont=Droid\ Sans\ Mono\ 8
 
 nnoremap <A-left> <C-W>h
 nnoremap <A-right> <C-W>l

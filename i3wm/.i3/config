@@ -86,7 +86,7 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 bar {
-	status_command conky 
+	status_command ~/.conky.sh
 	workspace_buttons yes
 	
 	colors {

@@ -4,5 +4,56 @@ total_run_times 0
 
 update_interval 5 
 
+if_up_strictness address
+
 TEXT
-Host: $nodename | Kernel: $kernel | Root: ${fs_used_perc /}% | IP: ${addr} | CPU-Temp: ${acpitemp}°C | Fan: ${ibm_fan} rpm | RAM: ${memperc}% | CPU-Load: ${cpu cpu0}% | Battery: ${battery_percent} | ${time %d.%m.%y %H:%M} 
+[
+	{
+		"full_text" : " Host: $nodename "
+	},
+	{
+		"full_text" : " Kernel: $kernel "
+	},
+	{
+		"full_text" : " Root: ${fs_used_perc /}% "
+	},
+	${if_up enp0s25}
+	{
+		"full_text" : " IP: ${addr enp0s25} "
+	},
+	${else}
+	${if_up wlp3s0}
+	{
+		"full_text" : " IP: ${addr wlp3s0} "
+	},
+	${else}
+	${if_up wwp0s29u1u4i6}
+	{
+		"full_text" : " IP: ${addr wwp0s29u1u4i6} "
+	},
+	${else}
+	{
+		"full_text" : " IP: No connection "
+	},
+	${endif}
+	${endif}
+	${endif}
+	{
+		"full_text" : " Temp: ${acpitemp}°C "
+	},
+	{
+		"full_text" : " Fan: ${ibm_fan} "
+	},
+	{
+		"full_text" : " RAM: ${memperc}% "
+	},
+	{
+		"full_text" : " Load: ${cpu cpu0}% "
+	},
+	{
+		"full_text" : " Battery: ${battery_percent} "
+	},
+	{
+		"full_text" : " ${time %Y/%m/%d %H:%M}"
+	}
+],
