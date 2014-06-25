@@ -12,9 +12,6 @@ TEXT
 		"full_text" : " Host: $nodename "
 	},
 	{
-		"full_text" : " Kernel: $kernel "
-	},
-	{
 		"full_text" : " Root: ${fs_used_perc /}% "
 	},
 	${if_up enp0s25}

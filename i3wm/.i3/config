@@ -116,7 +116,7 @@ bindsym $mod+Return exec urxvtc
 bindsym $alt+Return exec gvim 
 
 bindsym $mod+space exec --no-startup-id dmenu_run
-bindsym $alt+space exec --no-startup-id passman fillbrowser
+bindsym $alt+space exec --no-startup-id passman submitform
 
 bindsym control+Mod1+l exec --no-startup-id i3lock -c 000000 
 
