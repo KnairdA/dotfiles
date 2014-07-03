@@ -120,7 +120,9 @@ bindsym $alt+space exec --no-startup-id passman submitform
 
 bindsym control+Mod1+l exec --no-startup-id i3lock -c 000000 
 
-exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+bindsym Control+Mod1+m exec --no-startup-id ~/.screenlayout/mobile.sh
+bindsym Control+Mod1+d exec --no-startup-id ~/.screenlayout/docked.sh
+
 exec --no-startup-id urxvtd
 exec --no-startup-id nm-applet
 exec --no-startup-id feh --bg-center ~/.background.jpg
