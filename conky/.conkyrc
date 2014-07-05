@@ -1,56 +1,102 @@
 out_to_x no
 out_to_console yes
-total_run_times 0
-
 update_interval 5 
 
 if_up_strictness address
 
 TEXT
-[
-	{
-		"full_text" : " Host: $nodename "
-	},
-	{
-		"full_text" : " Root: ${fs_used_perc /}% "
-	},
-	${if_up enp0s25}
-	{
-		"full_text" : " IP: ${addr enp0s25} "
-	},
-	${else}
-	${if_up wlp3s0}
-	{
-		"full_text" : " IP: ${addr wlp3s0} "
-	},
-	${else}
-	${if_up wwp0s29u1u4i6}
-	{
-		"full_text" : " IP: ${addr wwp0s29u1u4i6} "
-	},
-	${else}
-	{
-		"full_text" : " IP: No connection "
-	},
-	${endif}
-	${endif}
-	${endif}
-	{
-		"full_text" : " Temp: ${acpitemp}°C "
-	},
-	{
-		"full_text" : " Fan: ${ibm_fan} "
-	},
-	{
-		"full_text" : " RAM: ${memperc}% "
-	},
-	{
-		"full_text" : " Load: ${cpu cpu0}% "
-	},
-	{
-		"full_text" : " Battery: ${battery_percent} "
-	},
-	{
-		"full_text" : " ${time %Y/%m/%d %H:%M}"
-	}
+[\
+	{\
+		"full_text" : "Host",\
+		"separator" : false\
+	},\
+	{\
+		"full_text" : "$nodename ",\
+		"color"     : "\#909737"\
+	},\
+	{\
+		"full_text" : " Root",\
+		"separator" : false\
+	},\
+	{\
+		"full_text" : "${fs_used_perc /}% ",\
+		"color"     : "\#909737"\
+	},\
+	{\
+		"full_text" : " IP",\
+		"separator" : false\
+	},\
+	${if_up enp0s25}\
+	{\
+		"full_text" : "${addr enp0s25} ",\
+		"color"     : "\#909737"\
+	},\
+	${else}\
+	${if_up wlp3s0}\
+	{\
+		"full_text" : "${addr wlp3s0} ",\
+		"color"     : "\#909737"\
+	},\
+	${else}\
+	${if_up wwp0s29u1u4i6}\
+	{\
+		"full_text" : "${addr wwp0s29u1u4i6} ",\
+		"color"     : "\#909737"\
+	},\
+	${else}\
+	{\
+		"full_text" : "No connection ",\
+		"color"     : "\#909737"\
+	},\
+	${endif}\
+	${endif}\
+	${endif}\
+	{\
+		"full_text" : " Temp",\
+		"separator" : false\
+	},\
+	{\
+		"full_text" : "${acpitemp}°C ",\
+		"color"     : "\#909737"\
+	},\
+	{\
+		"full_text" : " Fan",\
+		"separator" : false\
+	},\
+	{\
+		"full_text" : "${ibm_fan} ",\
+		"color"     : "\#909737"\
+	},\
+	{ \
+		"full_text" : " RAM",\
+		"separator" : false\
+	},\
+	{\
+		"full_text" : "${memperc}% ",\
+		"color"     : "\#909737"\
+	},\
+	{\
+		"full_text" : " Load",\
+		"separator" : false\
+	},\
+	{\
+		"full_text" : "${cpu cpu0}% ",\
+		"color"     : "\#909737"\
+	},\
+	{\
+		"full_text" : " Battery",\
+		"separator" : false\
+	},\
+	{\
+		"full_text" : "${battery_percent} ",\
+		"color"     : "\#909737"\
+	},\
+	{\
+		"full_text" : " ${time %Y/%m/%d}",\
+		"separator" : false\
+	},\
+	{\
+		"full_text" : "${time %H:%M}",\
+		"color"     : "\#909737"\
+	}\
 ],
