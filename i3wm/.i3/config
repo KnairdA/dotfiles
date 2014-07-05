@@ -88,7 +88,8 @@ bindsym $mod+r mode "resize"
 bar {
 	status_command ~/.conky.sh
 	workspace_buttons yes
-	
+	tray_output LVDS1
+
 	colors {
 		background #0e0e0e
 		statusline #839496
