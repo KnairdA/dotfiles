@@ -1,5 +1,5 @@
 URxvt.background: #111111
-URxvt.foreground: #c9c9c9
+URxvt.foreground: #d9d9d9
 URxvt.scrollBar: false
 URxvt.transparent: false
 URxvt.font: xft:Droid Sans Mono:size=8

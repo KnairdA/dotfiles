@@ -1,0 +1,23 @@
+loadplugins '\.(js|penta)$'
+group user
+
+set guioptions-=br
+set hintkeys=0123456789
+
+hi clear
+
+hi s_greenfont     color:#aadb0f;
+hi s_palegreenfont color:#909737;
+hi s_grayback      background:#161616;
+hi s_normal        font-size:14px;
+hi s_bottomline    border-bottom:1px solid #909737; margin-bottom:0;
+
+hi -l=s_normal,s_grayback,s_palegreenfont,s_bottomline StatusLine
+hi -l=s_normal,s_grayback,s_palegreenfont,s_bottomline StatusLineBroken
+hi -l=s_normal,s_grayback,s_palegreenfont,s_bottomline StatusLineExtended
+hi -l=s_normal,s_grayback,s_palegreenfont,s_bottomline StatusLineSecure
+
+hi -l=s_normal,s_greenfont,s_grayback                  Hint               font-weight:bold; padding:2px;
+hi                                                     HintElem           background:#a5a5a5;
+hi                                                     Hint[active]       background:#aadb0f;color:#161616;
+hi                                                     HintActive         background:#aadb0f;
