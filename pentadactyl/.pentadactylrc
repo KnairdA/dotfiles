@@ -9,7 +9,7 @@ hi clear
 hi s_greenfont     color:#aadb0f;
 hi s_palegreenfont color:#909737;
 hi s_grayback      background:#161616;
-hi s_normal        font-size:14px;
+hi s_normal        font-size:14px; font-family:Droid Sans Mono;
 hi s_bottomline    border-bottom:1px solid #909737; margin-bottom:0;
 
 hi -l=s_normal,s_grayback,s_palegreenfont,s_bottomline StatusLine

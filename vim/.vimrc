@@ -42,3 +42,8 @@ nmap <Up> [e
 nmap <Down> ]e
 vmap <Up> [egv
 vmap <Down> ]egv
+
+nnoremap <A-left> <C-W>h
+nnoremap <A-right> <C-W>l
+nnoremap <A-up> <C-W>k
+nnoremap <A-down> <C-W>j
