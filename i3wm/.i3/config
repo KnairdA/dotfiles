@@ -127,6 +127,7 @@ bindsym control+Mod1+l exec --no-startup-id i3lock -c 000000
 bindsym Control+Mod1+m exec --no-startup-id ~/.screenlayout/mobile.sh
 bindsym Control+Mod1+d exec --no-startup-id ~/.screenlayout/docked.sh
 
+exec --no-startup-id export $(gnome-keyring-daemon)
 exec --no-startup-id urxvtd
 exec --no-startup-id nm-applet
 exec --no-startup-id feh --bg-center ~/.background.jpg
