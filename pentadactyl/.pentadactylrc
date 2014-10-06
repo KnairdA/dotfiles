@@ -30,3 +30,9 @@ hi -l=s_normal,s_greenfont,s_grayback                  Hint                     
 hi                                                     HintElem                                 background:#a5a5a5;
 hi                                                     Hint[active]                             background:#aadb0f;color:#161616;
 hi                                                     HintActive                               background:#aadb0f;
+
+style -name tabbrowser-height-fix chrome://* <<EOM
+[dactyl-australis=true] .tabbrowser-tabs {
+    max-height:       unset !important;
+}
+EOM
