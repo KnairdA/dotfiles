@@ -95,7 +95,7 @@ bar {
 		background #161616
 		statusline #605c5a
 
-		focused_workspace  #161616  #909737  #ffffff
+		focused_workspace  #161616  #909737  #111111
 		active_workspace   #161616  #161616  #a5a5a5
 		inactive_workspace #161616  #545454  #a5a5a5
 		urgent_workspace   #161616  #545454  #a5a5a5
@@ -129,5 +129,6 @@ bindsym Control+Mod1+d exec --no-startup-id ~/.screenlayout/docked.sh
 
 exec --no-startup-id export $(gnome-keyring-daemon)
 exec --no-startup-id urxvtd
+exec --no-startup-id twmnd
 exec --no-startup-id nm-applet
 exec --no-startup-id feh --bg-center ~/.background.jpg
