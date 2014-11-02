@@ -50,7 +50,7 @@ bindsym $mod+9 workspace 9
 bindsym $mod+0 workspace 10
 
 bindsym Control+Mod1+Right workspace next_on_output
-bindsym Control+Mod1+Left  workspace prev_on_output 
+bindsym Control+Mod1+Left  workspace prev_on_output
 bindsym Control+Mod1+Down  move workspace to output right
 
 bindsym $mod+Shift+exclam move container to workspace 1
@@ -110,19 +110,19 @@ client.unfocused        #222222 #222222 #999999
 client.urgent           #a5a5a5 #a5a5a5 #2e3436
 client.background       #161616
 
-for_window [instance="urxvt"] border pixel 2
-
-for_window [class="Chromium"] border none
+for_window [instance="urxvt"]    border pixel 2
+for_window [instance="gvim"]     border pixel 2
+for_window [class="Chromium"]    border none
 for_window [class="Thunderbird"] border none
-for_window [class="Firefox"] border none
+for_window [class="Firefox"]     border none
 
-bindsym $mod+Return exec urxvtc 
-bindsym $alt+Return exec gvim 
+bindsym $mod+Return exec urxvtc
+bindsym $alt+Return exec gvim
 
 bindsym $mod+space exec --no-startup-id dmenu_run  -fn 'Droid Sans Mono-10' -nb '#222222' -nf '#605c5a' -sb '#111111' -sf '#aadb0f'
 bindsym $alt+space exec --no-startup-id passman submitform
 
-bindsym control+Mod1+l exec --no-startup-id i3lock -c 000000 
+bindsym control+Mod1+l exec --no-startup-id i3lock -c 000000
 
 bindsym Control+Mod1+m exec --no-startup-id ~/.screenlayout/mobile.sh
 bindsym Control+Mod1+d exec --no-startup-id ~/.screenlayout/docked.sh
