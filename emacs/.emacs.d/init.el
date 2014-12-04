@@ -2,6 +2,7 @@
 	("melpa" . "http://melpa.milkbox.net/packages/")
 	("org" . "http://orgmode.org/elpa/")
 	("gnu" . "http://elpa.gnu.org/packages/")
+	("org" . "http://orgmode.org/elpa/")
 ))
 
 (require 'package)
@@ -20,6 +21,9 @@
       (scroll-bar-mode -1)))
 
 (global-hl-line-mode 1)
+(setq-default tab-width 4)
+(setq make-backup-files nil)
+(setq auto-save-default nil)
 
 (define-key evil-normal-state-map (kbd "M-<left>") 'evil-window-left)
 (define-key evil-normal-state-map (kbd "M-<down>") 'evil-window-down)
