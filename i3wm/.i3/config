@@ -103,6 +103,7 @@ bar {
 }
 
 font pango:Droid Sans Mono 13px
+hide_edge_borders both
 
 client.focused          #909737 #909737 #111111
 client.focused_inactive #111111 #111111 #999999
@@ -110,16 +111,12 @@ client.unfocused        #222222 #222222 #999999
 client.urgent           #a5a5a5 #a5a5a5 #2e3436
 client.background       #161616
 
-for_window [instance="urxvt"]    border pixel 2
-for_window [instance="gvim"]     border pixel 2
-for_window [class="Chromium"]    border none
-for_window [class="Thunderbird"] border none
-for_window [class="Firefox"]     border none
+for_window [class="^.*"]         border pixel 2
 
 bindsym $mod+Return exec urxvtc
 bindsym $alt+Return exec gvim
 
-bindsym $mod+space exec --no-startup-id dmenu_run  -fn 'Droid Sans Mono-10' -nb '#222222' -nf '#605c5a' -sb '#111111' -sf '#aadb0f'
+bindsym $mod+space exec --no-startup-id dmenu_run  -fn 'Droid Sans Mono-11' -nb '#222222' -nf '#605c5a' -sb '#111111' -sf '#aadb0f'
 bindsym $alt+space exec --no-startup-id passman submitform
 
 bindsym control+Mod1+l exec --no-startup-id i3lock -c 000000
