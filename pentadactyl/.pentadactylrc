@@ -29,7 +29,7 @@ hi -link=s_normal,s_grayback,s_palegreenfont              CompItem[selected]    
 hi -link=s_normal,s_grayback2,s_palegreenfont             CompItem:nth-child(2n+1)
 hi -link=s_normal,s_grayback,s_palegreenfont              CompItem:nth-child(2n+1)[selected]       background:#909737;color:#161616;
 
-hi -link=s_normal,s_greenfont,s_grayback                  Hint                                     font-weight:bold !important; padding:2px !important;
-hi                                                        HintElem                                 background:#a5a5a5 !important;
-hi                                                        Hint[active]                             background:#aadb0f !important;color:#161616 !important;
-hi                                                        HintActive                               background:#aadb0f !important;
+hi -link=s_normal,s_greenfont,s_grayback                  Hint                                     font-weight:bold; padding:2px;
+hi                                                        HintElem                                 background:#a5a5a5;
+hi                                                        Hint[active]                             background:#aadb0f;color:#161616;
+hi                                                        HintActive                               background:#aadb0f;
