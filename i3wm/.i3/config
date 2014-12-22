@@ -10,19 +10,14 @@ bindsym $mod+j focus down
 bindsym $mod+k focus up
 bindsym $mod+l focus right
 
-bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
-bindsym $mod+Right focus right
-
 bindsym $mod+Shift+H move left
 bindsym $mod+Shift+J move down
 bindsym $mod+Shift+K move up
 bindsym $mod+Shift+L move right
 
-bindsym $mod+Shift+Left move left
-bindsym $mod+Shift+Down move down
-bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Left  move left
+bindsym $mod+Shift+Down  move down
+bindsym $mod+Shift+Up    move up
 bindsym $mod+Shift+Right move right
 
 bindsym $mod+y split h
@@ -53,37 +48,37 @@ bindsym Control+Mod1+Right workspace next_on_output
 bindsym Control+Mod1+Left  workspace prev_on_output
 bindsym Control+Mod1+Down  move workspace to output right
 
-bindsym $mod+Shift+exclam move container to workspace 1
-bindsym $mod+Shift+quotedbl move container to workspace 2
-bindsym $mod+Shift+section move container to workspace 3
-bindsym $mod+Shift+dollar move container to workspace 4
-bindsym $mod+Shift+percent move container to workspace 5
-bindsym $mod+Shift+ampersand move container to workspace 6
-bindsym $mod+Shift+slash move container to workspace 7
-bindsym $mod+Shift+parenleft move container to workspace 8
+bindsym $mod+Shift+exclam     move container to workspace 1
+bindsym $mod+Shift+quotedbl   move container to workspace 2
+bindsym $mod+Shift+section    move container to workspace 3
+bindsym $mod+Shift+dollar     move container to workspace 4
+bindsym $mod+Shift+percent    move container to workspace 5
+bindsym $mod+Shift+ampersand  move container to workspace 6
+bindsym $mod+Shift+slash      move container to workspace 7
+bindsym $mod+Shift+parenleft  move container to workspace 8
 bindsym $mod+Shift+parenright move container to workspace 9
-bindsym $mod+Shift+equal move container to workspace 10
+bindsym $mod+Shift+equal      move container to workspace 10
 
 bindsym $mod+Shift+C reload
 bindsym $mod+Shift+R restart
 bindsym $mod+Shift+E exit
 
-mode "resize" {
-	bindsym h resize shrink width 10 px or 10 ppt
-	bindsym j resize grow height 10 px or 10 ppt
-	bindsym k resize shrink height 10 px or 10 ppt
-	bindsym l resize grow width 10 px or 10 ppt
+bindsym $mod+r mode "resize"
 
-	bindsym 113 resize shrink width 10 px or 10 ppt
-	bindsym 116 resize grow height 10 px or 10 ppt
+mode "resize" {
+	bindsym h resize shrink width  10 px or 10 ppt
+	bindsym j resize grow   height 10 px or 10 ppt
+	bindsym k resize shrink height 10 px or 10 ppt
+	bindsym l resize grow   width  10 px or 10 ppt
+
+	bindsym 113 resize shrink width  10 px or 10 ppt
+	bindsym 116 resize grow   height 10 px or 10 ppt
 	bindsym 111 resize shrink height 10 px or 10 ppt
-	bindsym 114 resize grow width 10 px or 10 ppt
+	bindsym 114 resize grow   width  10 px or 10 ppt
 
 	bindsym Return mode "default"
 	bindsym Escape mode "default"
 }
-
-bindsym $mod+r mode "resize"
 
 bar {
 	status_command ~/.conky.sh
@@ -95,10 +90,10 @@ bar {
 		background #161616
 		statusline #605c5a
 
-		focused_workspace  #161616  #909737  #111111
-		active_workspace   #161616  #161616  #a5a5a5
-		inactive_workspace #161616  #545454  #a5a5a5
-		urgent_workspace   #161616  #545454  #a5a5a5
+		focused_workspace  #909737  #909737  #161616
+		urgent_workspace   #909737  #909737  #161616
+		active_workspace   #909737  #909737  #161616
+		inactive_workspace #161616  #161616  #909737
 	}
 }
 
@@ -111,17 +106,16 @@ client.unfocused        #222222 #222222 #999999
 client.urgent           #a5a5a5 #a5a5a5 #2e3436
 client.background       #161616
 
-for_window [class="^.*"]         border pixel 2
+for_window [class="^.*"] border pixel 2
 
-bindsym $mod+Return exec urxvtc
-bindsym $alt+Return exec gvim
+bindsym $mod+Return    exec urxvtc
+bindsym $alt+Return    exec gvim
 
-bindsym $mod+space    exec --no-startup-id dmenu_run -fn 'Droid Sans Mono-11' -nb '#222222' -nf '#605c5a' -sb '#111111' -sf '#aadb0f'
-bindsym $alt+space    exec --no-startup-id passman submitform
-bindsym Control+space exec --no-startup-id ~/.i3/apply_layout.sh
+bindsym $mod+space     exec --no-startup-id dmenu_run -fn 'Droid Sans Mono-11' -nb '#222222' -nf '#605c5a' -sb '#111111' -sf '#aadb0f'
+bindsym $alt+space     exec --no-startup-id passman submitform
+bindsym Control+space  exec --no-startup-id ~/.i3/apply_layout.sh
 
 bindsym Control+Mod1+l exec --no-startup-id i3lock -c 000000
-
 bindsym Control+Mod1+m exec --no-startup-id ~/.screenlayout/mobile.sh
 bindsym Control+Mod1+d exec --no-startup-id ~/.screenlayout/docked.sh
 
