@@ -1,16 +1,5 @@
 {
-	"percent": 0.5,
-	"swallows": [
-		{
-			"instance": ".*"
-		}
-	],
-	"type": "con"
-}
-{
-	"layout": "splitv",
-	"percent": 0.5,
-	"type": "con",
+	"layout": "splith",
 	"nodes": [
 		{
 			"percent": 0.5,
@@ -18,17 +7,29 @@
 				{
 					"instance": ".*"
 				}
-			],
-			"type": "con"
+			]
 		},
 		{
+			"layout": "splitv",
 			"percent": 0.5,
-			"swallows": [
+			"nodes": [
 				{
-					"instance": ".*"
+					"percent": 0.5,
+					"swallows": [
+						{
+							"instance": ".*"
+						}
+					]
+				},
+				{
+					"percent": 0.5,
+					"swallows": [
+						{
+							"instance": ".*"
+						}
+					]
 				}
-			],
-			"type": "con"
+			]
 		}
 	]
 }
