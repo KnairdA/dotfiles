@@ -111,8 +111,8 @@ for_window [class="^.*"] border pixel 2
 bindsym $mod+Return    exec urxvtc
 bindsym $alt+Return    exec gvim
 
-bindsym $mod+space     exec --no-startup-id dmenu_run -fn 'Droid Sans Mono-11' -nb '#222222' -nf '#605c5a' -sb '#111111' -sf '#aadb0f'
 bindsym $alt+space     exec --no-startup-id passman submitform
+bindsym $mod+space     exec --no-startup-id ~/.i3/dmenu_run.sh
 bindsym Control+space  exec --no-startup-id ~/.i3/apply_layout.sh
 
 bindsym Control+Mod1+l exec --no-startup-id i3lock -c 000000
