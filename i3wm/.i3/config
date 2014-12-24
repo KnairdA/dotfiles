@@ -106,8 +106,6 @@ client.unfocused        #222222 #222222 #999999
 client.urgent           #a5a5a5 #a5a5a5 #2e3436
 client.background       #161616
 
-for_window [class="^.*"] border pixel 2
-
 bindsym $mod+Return    exec urxvtc
 bindsym $alt+Return    exec gvim
 
@@ -119,8 +117,14 @@ bindsym Control+Mod1+l exec --no-startup-id i3lock -c 000000
 bindsym Control+Mod1+m exec --no-startup-id ~/.screenlayout/mobile.sh
 bindsym Control+Mod1+d exec --no-startup-id ~/.screenlayout/docked.sh
 
+bindsym $mod+n [title="^.*\.wiki \(~\/note\).*$"] scratchpad show
+
+for_window [class="^.*"]                      border pixel 2
+for_window [title="^.*\.wiki \(~\/note\).*$"] floating enable; border pixel 5; move to scratchpad
+
 exec --no-startup-id export $(gnome-keyring-daemon)
 exec --no-startup-id urxvtd
 exec --no-startup-id twmnd
 exec --no-startup-id nm-applet
 exec --no-startup-id feh --bg-center ~/.background.jpg
+exec --no-startup-id gvim ~/note/index.wiki
