@@ -10,7 +10,7 @@ set background=dark
 set lazyredraw
 set ttyfast
 
-set directory=~/.vim/swap,.
+set directory=~/.vim/swap//,.
 
 set wrap
 set tabstop=4 shiftwidth=4
@@ -61,3 +61,6 @@ let g:airline#extensions#tabline#right_alt_sep=''
 let g:airline#extensions#tabline#show_close_button=0
 
 let g:vimwiki_list = [{'path': '~/note/'}]
+
+autocmd FileType scheme  setlocal shiftwidth=2 tabstop=2 expandtab
+autocmd FileType vimwiki setlocal noswapfile
