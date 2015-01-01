@@ -1,6 +1,6 @@
 out_to_x no
 out_to_console yes
-update_interval 5 
+update_interval 5
 
 if_up_strictness address
 
@@ -87,10 +87,21 @@ TEXT
 		"full_text" : " Battery",\
 		"separator" : false\
 	},\
+	${if_match "${exec upower -i /org/freedesktop/UPower/devices/battery_BAT0 | pcregrep -o1 '^[ ]*state:[ ]*([\w]+)'}" == "discharging"}\
+	{\
+		"full_text" : "${battery_percent}",\
+		"color"     : "\#909737",\
+		"separator" : false\
+	},\
+	{\
+		"full_text" : "(${exec upower -i /org/freedesktop/UPower/devices/battery_BAT0 | pcregrep -o1 '^[ ]*energy.rate:[ ]*([\S]{1,4})'}W) "\
+	},\
+	${else}\
 	{\
 		"full_text" : "${battery_percent} ",\
 		"color"     : "\#909737"\
 	},\
+	${endif}\
 	{\
 		"full_text" : " ${time %Y/%m/%d}",\
 		"separator" : false\
