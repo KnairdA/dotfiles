@@ -19,7 +19,7 @@ TEXT
 		"separator" : false\
 	},\
 	{\
-		"full_text" : "${fs_used_perc /}% ",\
+		"full_text" : "${fs_used_perc /} ",\
 		"color"     : "\#909737"\
 	},\
 	{\
@@ -56,7 +56,7 @@ TEXT
 		"separator" : false\
 	},\
 	{\
-		"full_text" : "${acpitemp}°C ",\
+		"full_text" : "${acpitemp} ",\
 		"color"     : "\#909737"\
 	},\
 	{\
@@ -72,7 +72,7 @@ TEXT
 		"separator" : false\
 	},\
 	{\
-		"full_text" : "${memperc}% ",\
+		"full_text" : "${memperc} ",\
 		"color"     : "\#909737"\
 	},\
 	{\
@@ -80,7 +80,7 @@ TEXT
 		"separator" : false\
 	},\
 	{\
-		"full_text" : "${cpu cpu0}% ",\
+		"full_text" : "${cpu cpu0} ",\
 		"color"     : "\#909737"\
 	},\
 	{\
@@ -94,7 +94,7 @@ TEXT
 		"separator" : false\
 	},\
 	{\
-		"full_text" : "(${exec upower -i /org/freedesktop/UPower/devices/battery_BAT0 | pcregrep -o1 '^[ ]*energy.rate:[ ]*([\S]{1,4})'}W) "\
+		"full_text" : "(${exec upower -i /org/freedesktop/UPower/devices/battery_BAT0 | pcregrep -o1 '^[ ]*energy.rate:[ ]*([\S]{1,4})'}) "\
 	},\
 	${else}\
 	{\
