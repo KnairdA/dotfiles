@@ -2,4 +2,4 @@
 
 source ~/.dmenurc
 
-exec sh -c "source ~/.dmenurc; `echo \"dmenu_run \$DMENU\"`"
+exec sh -c "dmenu_run $DMENU"
