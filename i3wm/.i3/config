@@ -1,9 +1,10 @@
 set $mod Mod4
 set $alt Mod1
 
-floating_modifier $mod
-
 bindsym $mod+Shift+Q kill
+bindsym $mod+Shift+C reload
+bindsym $mod+Shift+R restart
+bindsym $mod+Shift+E exit
 
 bindsym $mod+h focus left
 bindsym $mod+j focus down
@@ -15,11 +16,6 @@ bindsym $mod+Shift+J move down
 bindsym $mod+Shift+K move up
 bindsym $mod+Shift+L move right
 
-bindsym $mod+Shift+Left  move left
-bindsym $mod+Shift+Down  move down
-bindsym $mod+Shift+Up    move up
-bindsym $mod+Shift+Right move right
-
 bindsym $mod+y split h
 bindsym $mod+x split v
 bindsym $mod+f fullscreen
@@ -28,10 +24,11 @@ bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
 bindsym $mod+e layout default
 
-bindsym $mod+Shift+space floating toggle
-
 bindsym $mod+a focus parent
 bindsym $mod+d focus child
+
+floating_modifier $mod
+bindsym $mod+Shift+space floating toggle
 
 bindsym $mod+1 workspace 1
 bindsym $mod+2 workspace 2
@@ -58,10 +55,6 @@ bindsym $mod+Shift+slash      move container to workspace 7
 bindsym $mod+Shift+parenleft  move container to workspace 8
 bindsym $mod+Shift+parenright move container to workspace 9
 bindsym $mod+Shift+equal      move container to workspace 10
-
-bindsym $mod+Shift+C reload
-bindsym $mod+Shift+R restart
-bindsym $mod+Shift+E exit
 
 bindsym $mod+r mode "resize"
 

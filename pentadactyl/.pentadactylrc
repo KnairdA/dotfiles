@@ -12,24 +12,23 @@ hi clear
 hi s_greenfont     color:#aadb0f;
 hi s_palegreenfont color:#909737;
 hi s_grayback      background:#161616;
-hi s_grayback2     background:#121212;
 hi s_normal        font-size:14px; font-family:Droid Sans Mono;
-hi s_bottomline    border-bottom:1px solid #909737; margin-bottom:0;
 
-hi -link=s_normal,s_grayback,s_palegreenfont              Normal
-hi -link=s_normal,s_grayback,s_palegreenfont,s_bottomline StatusLine
-hi -link=s_normal,s_grayback,s_palegreenfont,s_bottomline StatusLineBroken
-hi -link=s_normal,s_grayback,s_palegreenfont,s_bottomline StatusLineExtended
-hi -link=s_normal,s_grayback,s_palegreenfont,s_bottomline StatusLineSecure
-hi -link=s_normal,s_grayback,s_palegreenfont              CompTitle
-hi                                                        CompTitleSep                             background:#909737;height:1px;
-hi                                                        Comp                                     border:0;margin:0;
-hi -link=s_normal,s_grayback,s_palegreenfont              CompItem
-hi -link=s_normal,s_grayback,s_palegreenfont              CompItem[selected]                       background:#909737;color:#161616;
-hi -link=s_normal,s_grayback2,s_palegreenfont             CompItem:nth-child(2n+1)
-hi -link=s_normal,s_grayback,s_palegreenfont              CompItem:nth-child(2n+1)[selected]       background:#909737;color:#161616;
+hi -link=s_normal,s_grayback,s_palegreenfont Normal                                   border-top:1px solid #909737;
+hi -link=s_normal,s_grayback,s_palegreenfont StatusLine
+hi -link=s_normal,s_grayback,s_palegreenfont StatusLineNormal
+hi -link=s_normal,s_grayback,s_palegreenfont StatusLineBroken
+hi -link=s_normal,s_grayback,s_palegreenfont StatusLineExtended
+hi -link=s_normal,s_grayback,s_palegreenfont StatusLineSecure
+hi -link=s_normal,s_grayback,s_palegreenfont CompTitle
+hi                                           CompTitleSep                             background:#909737;height:1px;
+hi                                           Comp                                     border:0;margin:0;
+hi -link=s_normal,s_grayback,s_palegreenfont CompItem
+hi -link=s_normal,s_grayback,s_palegreenfont CompItem[selected]                       background:#909737;color:#161616;
+hi -link=s_normal,s_palegreenfont            CompItem:nth-child(2n+1)                 background:#121212;
+hi -link=s_normal,s_grayback,s_palegreenfont CompItem:nth-child(2n+1)[selected]       background:#909737;color:#161616;
 
-hi -link=s_normal,s_greenfont,s_grayback                  Hint                                     font-weight:bold; padding:2px;
-hi                                                        HintElem                                 background:#a5a5a5;
-hi                                                        Hint[active]                             background:#aadb0f;color:#161616;
-hi                                                        HintActive                               background:#aadb0f;
+hi -link=s_normal,s_greenfont,s_grayback     Hint                                     font-weight:bold; padding:2px;
+hi                                           HintElem                                 background:#a5a5a5;
+hi                                           Hint[active]                             background:#aadb0f;color:#161616;
+hi                                           HintActive                               background:#aadb0f;
