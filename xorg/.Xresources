@@ -1,7 +1,9 @@
 URxvt.background: #000000
 URxvt.foreground: #d9d9d9
 URxvt.scrollBar: false
+URxvt.depth: 32
 URxvt.transparent: false
+URxvt.fading: 10
 URxvt.font: xft:Droid Sans Mono:size=8
 URxvt.perl-ext-common:  default,matcher,clipboard
 URxvt.saveLines: 10000
