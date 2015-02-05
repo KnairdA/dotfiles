@@ -93,8 +93,8 @@ bar {
 font pango:Droid Sans Mono 13px
 hide_edge_borders both
 
-client.focused          #909737 #909737 #111111
-client.focused_inactive #111111 #111111 #999999
+client.focused          #909737 #909737 #222222
+client.focused_inactive #222222 #222222 #999999
 client.unfocused        #222222 #222222 #999999
 client.urgent           #a5a5a5 #a5a5a5 #2e3436
 client.background       #161616
@@ -113,8 +113,8 @@ bindsym Control+Mod1+d exec --no-startup-id ~/.screenlayout/docked.sh
 
 bindsym $mod+n [title="^.*\.wiki \(~\/note\).*$"] scratchpad show
 
-for_window [class="^.*"]                      border pixel 2
-for_window [title="^.*\.wiki \(~\/note\).*$"] floating enable; border pixel 5; move to scratchpad
+for_window [class="^.*"]                      border pixel 4
+for_window [title="^.*\.wiki \(~\/note\).*$"] floating enable; move to scratchpad
 
 exec --no-startup-id export $(gnome-keyring-daemon)
 exec --no-startup-id urxvtd
