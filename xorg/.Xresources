@@ -25,7 +25,7 @@ URxvt.background:            #171717
 URxvt.foreground:            #F2F2F2
 
 ! black
-URxvt.color0:                #000000
+URxvt.color0:                #171717
 URxvt.color8:                #F2F2F2
 ! red
 URxvt.color1:                #8C3346

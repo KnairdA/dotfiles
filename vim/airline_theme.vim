@@ -28,27 +28,27 @@ let g:airline#themes#akr#palette = {}
 " to the dictionary.  The array is in the format:
 " [ guifg, guibg, ctermfg, ctermbg, opts ]. See "help attr-list" for valid
 " values for the "opt" value.
-let s:N1   = [ '#212121' , '#909636' , 17  , 190 ]
-let s:N2   = [ '#909636' , '#212121' , 255 , 238 ]
-let s:N3   = [ '#909636' , '#212121' , 85  , 234 ]
+let s:N1   = [ '#212121' , '#909636' , 0  , 10 ]
+let s:N2   = [ '#909636' , '#212121' , 10 , 0 ]
+let s:N3   = [ '#909636' , '#212121' , 10 , 0 ]
 let g:airline#themes#akr#palette.normal = airline#themes#generate_color_map(s:N1, s:N2, s:N3)
 
 " Here we define overrides for when the buffer is modified.  This will be
 " applied after g:airline#themes#akr#palette.normal, hence why only certain keys are
 " declared.
 let g:airline#themes#akr#palette.normal_modified = {
-      \ 'airline_c': [ '#212121' , '#352F6A' , 255     , 53      , ''     ] ,
+      \ 'airline_c': [ '#212121' , '#352F6A' , 0     , 4      , ''     ] ,
       \ }
 
-let s:I1 = [ '#E4E093' , '#352F6A' , 17  , 45  ]
-let s:I2 = [ '#909636' , '#212121' , 255 , 27  ]
-let s:I3 = [ '#909636' , '#212121' , 15  , 17  ]
+let s:I1 = [ '#E4E093' , '#352F6A' , 3  , 4  ]
+let s:I2 = [ '#909636' , '#212121' , 10 , 0  ]
+let s:I3 = [ '#909636' , '#212121' , 10  , 0  ]
 let g:airline#themes#akr#palette.insert = airline#themes#generate_color_map(s:I1, s:I2, s:I3)
 let g:airline#themes#akr#palette.insert_modified = {
-      \ 'airline_c': [ '#212121' , '#352F6A' , 255     , 53      , ''     ] ,
+      \ 'airline_c': [ '#212121' , '#352F6A' , 0     , 4      , ''     ] ,
       \ }
 let g:airline#themes#akr#palette.insert_paste = {
-      \ 'airline_a': [ s:I1[0]   , '#352F6A' , s:I1[2] , 172     , ''     ] ,
+      \ 'airline_a': [ s:I1[0]   , '#352F6A' , s:I1[2] , 4     , ''     ] ,
       \ }
 
 let g:airline#themes#akr#palette.replace = copy(g:airline#themes#akr#palette.insert)
@@ -56,18 +56,18 @@ let g:airline#themes#akr#palette.replace.airline_a = [ s:I2[0]   , '#af0000' , s
 let g:airline#themes#akr#palette.replace_modified = g:airline#themes#akr#palette.insert_modified
 
 
-let s:V1 = [ '#E4E093' , '#8C3346' , 232 , 214 ]
-let s:V2 = [ '#909636' , '#212121' , 232 , 202 ]
-let s:V3 = [ '#909636' , '#212121' , 15  , 52  ]
+let s:V1 = [ '#E4E093' , '#8C3346' , 3 , 1 ]
+let s:V2 = [ '#909636' , '#212121' , 10 , 0 ]
+let s:V3 = [ '#909636' , '#212121' , 10  , 0  ]
 let g:airline#themes#akr#palette.visual = airline#themes#generate_color_map(s:V1, s:V2, s:V3)
 let g:airline#themes#akr#palette.visual_modified = {
-      \ 'airline_c': [ '#212121' , '#8C3346' , 255     , 53      , ''     ] ,
+      \ 'airline_c': [ '#212121' , '#8C3346' , 0     , 1      , ''     ] ,
       \ }
 
 
-let s:IA1 = [ '#605c5a' , '#212121' , 239 , 234 , '' ]
-let s:IA2 = [ '#605c5a' , '#212121' , 239 , 235 , '' ]
-let s:IA3 = [ '#605c5a' , '#212121' , 239 , 236 , '' ]
+let s:IA1 = [ '#605c5a' , '#212121' , 0 , 0 , '' ]
+let s:IA2 = [ '#605c5a' , '#212121' , 0 , 0 , '' ]
+let s:IA3 = [ '#605c5a' , '#212121' , 0 , 0 , '' ]
 let g:airline#themes#akr#palette.inactive = airline#themes#generate_color_map(s:IA1, s:IA2, s:IA3)
 let g:airline#themes#akr#palette.inactive_modified = {
       \ 'airline_c': [ '' , '' , 97 , '' , '' ] ,
@@ -82,7 +82,7 @@ let g:airline#themes#akr#palette.inactive_modified = {
 " will be red instead of the section's foreground color. You can also have
 " multiple parts with accents within a section.
 let g:airline#themes#akr#palette.accents = {
-      \ 'red': [ '#ff0000' , '' , 160 , ''  ]
+      \ 'red': [ '#ff0000' , '' , 9 , ''  ]
       \ }
 
 
@@ -94,7 +94,7 @@ if !get(g:, 'loaded_ctrlp', 0)
   finish
 endif
 let g:airline#themes#akr#palette.ctrlp = airline#extensions#ctrlp#generate_color_map(
-      \ [ '#909636' , '#212121' , 189 , 55  , ''     ],
-      \ [ '#909636' , '#212121' , 231 , 98  , ''     ],
-      \ [ '#212121' , '#909636' , 55  , 231 , 'bold' ])
+      \ [ '#909636' , '#212121' , 10 , 0  , ''     ],
+      \ [ '#909636' , '#212121' , 10 , 0  , ''     ],
+      \ [ '#212121' , '#909636' , 0  , 10 , 'bold' ])
 
