@@ -61,7 +61,7 @@ let s:V2 = [ '#909636' , '#212121' , 232 , 202 ]
 let s:V3 = [ '#909636' , '#212121' , 15  , 52  ]
 let g:airline#themes#akr#palette.visual = airline#themes#generate_color_map(s:V1, s:V2, s:V3)
 let g:airline#themes#akr#palette.visual_modified = {
-      \ 'airline_c': [ '#212121' , '8C3346' , 255     , 53      , ''     ] ,
+      \ 'airline_c': [ '#212121' , '#8C3346' , 255     , 53      , ''     ] ,
       \ }
 
 
