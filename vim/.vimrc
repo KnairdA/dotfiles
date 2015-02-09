@@ -6,9 +6,12 @@ set encoding=utf-8
 set showcmd
 set nocompatible
 set number
-set background=dark
 set lazyredraw
 set ttyfast
+set mouse=a
+set background=dark
+
+colorscheme akr
 
 set directory=~/.vim/swap//,.
 
@@ -23,7 +26,9 @@ set incsearch
 set ignorecase
 set smartcase
 
-colorscheme akr
+map <leader>s :let @/=""<CR>
+autocmd InsertEnter * :setlocal nohlsearch
+autocmd InsertLeave * :setlocal hlsearch
 
 vnoremap cc "+y
 nnoremap cc "+p
