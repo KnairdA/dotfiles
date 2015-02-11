@@ -10,6 +10,7 @@ set lazyredraw
 set ttyfast
 set mouse=a
 set background=dark
+set shell=/bin/sh
 
 colorscheme akr
 
@@ -27,13 +28,14 @@ set ignorecase
 set smartcase
 
 map <leader>s :let @/=""<CR>
-autocmd InsertEnter * :setlocal nohlsearch
-autocmd InsertLeave * :setlocal hlsearch
+
+autocmd InsertEnter *   :setlocal nohlsearch
+autocmd InsertLeave *   :setlocal hlsearch
+autocmd FileType scheme  setlocal shiftwidth=2 tabstop=2 expandtab
+autocmd FileType vimwiki setlocal noswapfile
 
 vnoremap cc "+y
 nnoremap cc "+p
-nnoremap <F5> :GundoToggle<CR>
-nnoremap <F3> :TlistToggle<CR>
 
 nnoremap <C-left> gT
 nnoremap <C-right> gt
@@ -67,6 +69,8 @@ let g:airline#extensions#tabline#right_alt_sep=''
 let g:airline#extensions#tabline#show_close_button=0
 
 let g:vimwiki_list = [{'path': '~/note/'}]
+let g:gitgutter_enabled = 0
+let g:gitgutter_highlight_lines = 1
 
-autocmd FileType scheme  setlocal shiftwidth=2 tabstop=2 expandtab
-autocmd FileType vimwiki setlocal noswapfile
+nnoremap <F5> :GundoToggle<CR>
+nnoremap <F6> :GitGutterToggle<CR>
