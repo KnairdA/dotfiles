@@ -1,13 +1,13 @@
-set font "Droid Sans Mono 10.5"
+set  font                     "Droid Sans Mono 10.5"
 
-set inputbar-bg "#161616"
-set inputbar-fg "#909737"
+set  inputbar-bg              "#161616"
+set  inputbar-fg              "#909737"
 
-set statusbar-bg "#161616"
-set statusbar-fg "#909737"
+set  statusbar-bg             "#161616"
+set  statusbar-fg             "#909737"
 
-set completion-bg "#161616"
-set completion-fg "#909737"
+set  completion-bg            "#161616"
+set  completion-fg            "#909737"
 
-set completion-highlight-bg "#909737"
-set completion-highlight-fg "#161616"
+set  completion-highlight-bg  "#909737"
+set  completion-highlight-fg  "#161616"

@@ -1,4 +1,4 @@
-(use readline irregex)
+(use readline irregex srfi-1)
 (current-input-port (make-readline-port "λ "))
 (history-install-file-manager
 	(string-append (or (get-environment-variable "HOME") ".") "/.csi.history"))

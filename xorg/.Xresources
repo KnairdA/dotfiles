@@ -21,11 +21,11 @@ URxvt.keysym.M-Up:           \033[1;3A
 URxvt.keysym.M-Left:         \033[1;3D
 URxvt.keysym.M-Right:        \033[1;3C
 
-URxvt.background:            #171717
+URxvt.background:            #161616
 URxvt.foreground:            #F2F2F2
 
 ! black
-URxvt.color0:                #171717
+URxvt.color0:                #161616
 URxvt.color8:                #F2F2F2
 ! red
 URxvt.color1:                #8C3346
