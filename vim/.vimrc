@@ -6,6 +6,7 @@ set encoding=utf-8
 set showcmd
 set nocompatible
 set number
+set cursorline
 set lazyredraw
 set ttyfast
 set mouse=a
