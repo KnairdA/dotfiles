@@ -8,7 +8,7 @@ hi      NonText        gui=NONE       guifg=#161616  guibg=#161616
 hi      LineNr         gui=NONE       guifg=#605c5a  guibg=NONE
 hi      Cursor         gui=reverse    guifg=NONE     guibg=NONE
 hi      CursorColumn   gui=NONE       guifg=NONE     guibg=#000000
-hi      CursorLine     gui=NONE       guifg=NONE     guibg=#161616
+hi      CursorLine     gui=NONE       guifg=NONE     guibg=#212121
 hi      CursorLineNr   gui=NONE       guifg=#aadb0f  guibg=#212121
 hi      ColorColumn    gui=NONE       guifg=NONE     guibg=#aadb0f
 hi      SignColumn     gui=NONE       guifg=NONE     guibg=#aadb0f

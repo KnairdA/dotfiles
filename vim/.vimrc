@@ -5,8 +5,8 @@ filetype plugin indent on
 set encoding=utf-8
 set showcmd
 set nocompatible
+set nocursorline
 set number
-set cursorline
 set lazyredraw
 set ttyfast
 set mouse=a
@@ -75,3 +75,4 @@ let g:gitgutter_highlight_lines = 1
 
 nnoremap <F5> :GundoToggle<CR>
 nnoremap <F6> :GitGutterToggle<CR>
+nnoremap <F7> :set cursorline!<CR>
