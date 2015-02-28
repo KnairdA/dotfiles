@@ -1,3 +1,15 @@
+" The following plugins are expected to be installed:
+" * pathogen       -- autoload other plugins
+" * ctrlp.vim      -- fuzzy file search
+" * gundo.vim      -- visualize undo tree
+" * vim-airline    -- better status bar
+" * vim-unimpaired -- bracket mappings
+" * vim-csapprox   -- approximate color scheme for cli
+" * vim-gitgutter  -- display git diffs alongside line numbers
+" * vim-renamer    -- file renaming utility
+" * vim-vimwiki    -- makes it easier to manage e.g. notes
+" * goyo.vim       -- undistracted writing mode
+
 call pathogen#infect()
 
 syntax enable
@@ -22,6 +34,7 @@ set tabstop=4 shiftwidth=4
 set backspace=indent,eol,start
 set listchars=tab:\•\ 
 set list
+set linebreak
 
 set hlsearch
 set incsearch
@@ -57,22 +70,26 @@ nnoremap <A-up> <C-W>k
 nnoremap <A-down> <C-W>j
 
 set laststatus=2
-let g:airline_theme='akr'
-let g:airline#extensions#tabline#enabled=1
-let g:airline#extensions#tabline#show_buffers=0
-let g:airline#extensions#tabline#show_tab_type=0
-let g:airline#extensions#tabline#formatter='unique_tail_improved'
-let g:airline#extensions#tabline#buffer_idx_mode=0
-let g:airline#extensions#tabline#left_sep=''
-let g:airline#extensions#tabline#left_alt_sep=''
-let g:airline#extensions#tabline#right_sep=''
-let g:airline#extensions#tabline#right_alt_sep=''
-let g:airline#extensions#tabline#show_close_button=0
+let g:airline_theme                                = 'akr'
+let g:airline#extensions#tabline#enabled           = 1
+let g:airline#extensions#tabline#show_buffers      = 0
+let g:airline#extensions#tabline#show_tab_type     = 0
+let g:airline#extensions#tabline#formatter         = 'unique_tail_improved'
+let g:airline#extensions#tabline#buffer_idx_mode   = 0
+let g:airline#extensions#tabline#left_sep          = ''
+let g:airline#extensions#tabline#left_alt_sep      = ''
+let g:airline#extensions#tabline#right_sep         = ''
+let g:airline#extensions#tabline#right_alt_sep     = ''
+let g:airline#extensions#tabline#show_close_button = 0
 
-let g:vimwiki_list = [{'path': '~/note/'}]
-let g:gitgutter_enabled = 0
+let g:vimwiki_list              = [{'path': '~/note/'}]
+let g:gitgutter_enabled         = 0
 let g:gitgutter_highlight_lines = 1
+let g:goyo_width                = 90
+let g:goyo_margin_top           = 1
+let g:goyo_margin_bottom        = 0
 
-nnoremap <F5> :GundoToggle<CR>
-nnoremap <F6> :GitGutterToggle<CR>
-nnoremap <F7> :set cursorline!<CR>
+nnoremap <F5>  :GundoToggle<CR>
+nnoremap <F6>  :GitGutterToggle<CR>
+nnoremap <F7>  :set cursorline!<CR>
+nnoremap <F12> :Goyo<CR>
