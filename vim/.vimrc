@@ -53,6 +53,7 @@ nnoremap cc "+p
 
 nnoremap <C-left> gT
 nnoremap <C-right> gt
+nnoremap <space> zz
 
 nmap <Left> <<
 nmap <Right> >>
