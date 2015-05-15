@@ -2,6 +2,8 @@
 	"layout": "splith",
 	"nodes": [
 		{
+			"border": "pixel",
+			"current_border_width": 4,
 			"percent": 0.5,
 			"swallows": [
 				{
@@ -14,6 +16,8 @@
 			"percent": 0.5,
 			"nodes": [
 				{
+					"border": "pixel",
+					"current_border_width": 4,
 					"percent": 0.5,
 					"swallows": [
 						{
@@ -22,6 +26,8 @@
 					]
 				},
 				{
+					"border": "pixel",
+					"current_border_width": 4,
 					"percent": 0.5,
 					"swallows": [
 						{

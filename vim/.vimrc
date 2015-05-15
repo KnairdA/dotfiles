@@ -94,3 +94,5 @@ nnoremap <F5>  :GundoToggle<CR>
 nnoremap <F6>  :GitGutterToggle<CR>
 nnoremap <F7>  :set cursorline!<CR>
 nnoremap <F12> :Goyo<CR>
+
+map <leader>t :VimwikiToggleListItem<CR>

@@ -11,3 +11,5 @@ set  completion-fg            "#909737"
 
 set  completion-highlight-bg  "#909737"
 set  completion-highlight-fg  "#161616"
+
+set  recolor
