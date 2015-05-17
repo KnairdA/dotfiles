@@ -77,7 +77,7 @@ bar {
 	status_command ~/.conky.sh
 	workspace_buttons yes
 	tray_output LVDS1
-	font pango:Droid Sans Mono 13px
+	font pango:Dejavu Sans Mono 13px
 
 	colors {
 		background #161616
@@ -90,7 +90,7 @@ bar {
 	}
 }
 
-font pango:Droid Sans Mono 13px
+font pango:Dejavu Sans Mono 13px
 hide_edge_borders both
 
 client.focused          #909737 #909737 #222222
@@ -99,7 +99,7 @@ client.unfocused        #222222 #222222 #999999
 client.urgent           #a5a5a5 #a5a5a5 #2e3436
 client.background       #161616
 
-bindsym Control+Return exec urxvtc -fn "xft:Droid\ Sans\ Mono:size=10" -title "Chicken Scheme REPL" -e csi -q
+bindsym Control+Return exec urxvtc -fn "xft:Dejavu\ Sans\ Mono:size=10" -title "Chicken Scheme REPL" -e csi -q
 bindsym $mod+Return    exec urxvtc
 bindsym $alt+Return    exec gvim
 

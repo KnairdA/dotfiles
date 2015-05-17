@@ -5,4 +5,4 @@ set guioptions-=m
 set guioptions-=T
 set guioptions-=e
 
-set guifont=Droid\ Sans\ Mono\ 8
+set guifont=Dejavu\ Sans\ Mono\ 8
