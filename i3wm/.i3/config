@@ -99,7 +99,7 @@ client.unfocused        #222222 #222222 #999999
 client.urgent           #a5a5a5 #a5a5a5 #2e3436
 client.background       #161616
 
-bindsym Control+Return exec urxvtc -fn "xft:Dejavu\ Sans\ Mono:size=10" -title "Chicken Scheme REPL" -e csi -q
+bindsym Control+Return exec urxvtc -title "Chicken Scheme REPL" -e csi -q
 bindsym $mod+Return    exec urxvtc
 bindsym $alt+Return    exec gvim
 
