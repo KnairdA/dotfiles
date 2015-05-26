@@ -1,0 +1,39 @@
+{
+	"layout": "splith",
+	"nodes": [
+		{
+			"border": "pixel",
+			"percent": 0.5,
+			"swallows": [
+				{
+					"instance": ".*"
+				}
+			]
+		},
+		{
+			"layout": "stacked",
+			"percent": 0.5,
+			"nodes": [
+				{
+					"border": "pixel",
+					"percent": 0.5,
+					"swallows": [
+						{
+							"instance": ".*"
+						}
+					]
+				},
+				{
+					"border": "pixel",
+					"percent": 0.5,
+					"swallows": [
+						{
+							"instance": ".*"
+						}
+					]
+				}
+			]
+		}
+	]
+}
+
