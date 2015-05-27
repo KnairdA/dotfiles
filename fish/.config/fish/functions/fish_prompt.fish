@@ -1,4 +1,6 @@
 function fish_prompt
+	set last_status $status
+
 	if not set -q __fish_prompt_normal
 		set -g __fish_prompt_normal (set_color normal)
 	end
@@ -19,5 +21,13 @@ function fish_prompt
 			end
 	end
 
-	echo -n -s 'λ ' "$__fish_prompt_cwd" (prompt_pwd) "$__fish_prompt_normal" ' ▸ '
+	echo -n -s 'λ ' "$__fish_prompt_cwd" (prompt_pwd) "$__fish_prompt_normal"
+
+	if test $last_status -gt 0
+		set_color $fish_color_cwd_root
+		echo -n -s ' ▸ '
+		set_color normal
+	else
+		echo -n -s ' ▸ '
+	end
 end
