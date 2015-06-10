@@ -59,10 +59,10 @@ bindsym $mod+Shift+equal      move container to workspace 10
 bindsym $mod+r mode "resize"
 
 mode "resize" {
-	bindsym h resize shrink width  10 px or 10 ppt
+	bindsym h resize shrink width   5 px or  5 ppt
 	bindsym j resize grow   height 10 px or 10 ppt
 	bindsym k resize shrink height 10 px or 10 ppt
-	bindsym l resize grow   width  10 px or 10 ppt
+	bindsym l resize grow   width   5 px or  5 ppt
 
 	bindsym 113 resize shrink width  10 px or 10 ppt
 	bindsym 116 resize grow   height 10 px or 10 ppt
@@ -110,6 +110,7 @@ bindsym Control+space  exec --no-startup-id ~/.i3/apply_layout.sh
 bindsym Control+Mod1+l exec --no-startup-id i3lock -c 000000
 bindsym Control+Mod1+m exec --no-startup-id ~/.screenlayout/mobile.sh
 bindsym Control+Mod1+d exec --no-startup-id ~/.screenlayout/docked.sh
+bindsym Control+Mod1+v exec --no-startup-id ~/.screenlayout/docked_vertical.sh
 
 bindsym $mod+n [title="^.*\.wiki \(~\/note\).*$"] scratchpad show
 

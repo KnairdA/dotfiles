@@ -54,6 +54,8 @@ nnoremap cc "+p
 nnoremap <C-left> gT
 nnoremap <C-right> gt
 nnoremap <space> zz
+nnoremap J }
+nnoremap K {
 
 nmap <Left> <<
 nmap <Right> >>

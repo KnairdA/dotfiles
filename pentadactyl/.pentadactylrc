@@ -1,7 +1,7 @@
 loadplugins '\.(js|penta)$'
 group user
 
-set guioptions-=br
+set guioptions=Cs
 set hintkeys=0123456789
 
 map -b j 5j
