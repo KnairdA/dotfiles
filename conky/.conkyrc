@@ -7,89 +7,88 @@ if_up_strictness address
 TEXT
 [\
 	{\
-		"full_text" : "Host",\
+		"full_text" : "",\
 		"separator" : false\
 	},\
 	{\
-		"full_text" : "$nodename ",\
-		"color"     : "\#909737"\
-	},\
-	{\
-		"full_text" : " Root",\
-		"separator" : false\
-	},\
-	{\
-		"full_text" : "${fs_used_perc /} ",\
-		"color"     : "\#909737"\
-	},\
-	{\
-		"full_text" : " IP",\
+		"full_text" : "${fs_used_perc /}%",\
+		"color"     : "\#909737",\
 		"separator" : false\
 	},\
 	${if_up enp0s25}\
 	{\
-		"full_text" : "${addr enp0s25} ",\
-		"color"     : "\#909737"\
+		"full_text" : "",\
+		"separator" : false\
+	},\
+	{\
+		"full_text" : "${addr enp0s25}",\
+		"color"     : "\#909737",\
+		"separator" : false\
 	},\
 	${else}\
 	${if_up wlp3s0}\
 	{\
-		"full_text" : "${addr wlp3s0} ",\
-		"color"     : "\#909737"\
+		"full_text" : "",\
+		"separator" : false\
+	},\
+	{\
+		"full_text" : "${addr wlp3s0}",\
+		"color"     : "\#909737",\
+		"separator" : false\
 	},\
 	${else}\
 	${if_up wwp0s29u1u4i6}\
 	{\
-		"full_text" : "${addr wwp0s29u1u4i6} ",\
-		"color"     : "\#909737"\
-	},\
-	${else}\
-	{\
-		"full_text" : "No connection ",\
-		"color"     : "\#909737"\
+		"full_text" : "${addr wwp0s29u1u4i6}",\
+		"color"     : "\#909737",\
+		"separator" : false\
 	},\
 	${endif}\
 	${endif}\
 	${endif}\
 	{\
-		"full_text" : " Temp",\
+		"full_text" : "",\
 		"separator" : false\
 	},\
 	{\
-		"full_text" : "${acpitemp} ",\
-		"color"     : "\#909737"\
-	},\
-	{\
-		"full_text" : " Fan",\
+		"full_text" : "${acpitemp}°C",\
+		"color"     : "\#909737",\
 		"separator" : false\
 	},\
 	{\
-		"full_text" : "${ibm_fan} ",\
-		"color"     : "\#909737"\
+		"full_text" : "",\
+		"separator" : false\
+	},\
+	{\
+		"full_text" : "${ibm_fan}",\
+		"color"     : "\#909737",\
+		"separator" : false\
 	},\
 	{ \
-		"full_text" : " RAM",\
+		"full_text" : "",\
 		"separator" : false\
 	},\
 	{\
-		"full_text" : "${memperc} ",\
-		"color"     : "\#909737"\
-	},\
-	{\
-		"full_text" : " Load",\
+		"full_text" : "${memperc}%",\
+		"color"     : "\#909737",\
 		"separator" : false\
 	},\
 	{\
-		"full_text" : "${cpu cpu0} ",\
-		"color"     : "\#909737"\
+		"full_text" : "",\
+		"separator" : false\
 	},\
 	{\
-		"full_text" : " Battery",\
+		"full_text" : "${loadavg}",\
+		"color"     : "\#909737",\
 		"separator" : false\
 	},\
 	${if_match "${exec upower -i /org/freedesktop/UPower/devices/battery_BAT0 | pcregrep -o1 '^[ ]*state:[ ]*([\w]+)'}" == "discharging"}\
 	{\
-		"full_text" : "${battery_percent}",\
+		"full_text" : "",\
+		"separator" : false\
+	},\
+	{\
+		"full_text" : "${battery_percent}%",\
 		"color"     : "\#909737",\
 		"separator" : false\
 	},\
@@ -98,7 +97,11 @@ TEXT
 	},\
 	${else}\
 	{\
-		"full_text" : "${battery_percent} ",\
+		"full_text" : "",\
+		"separator" : false\
+	},\
+	{\
+		"full_text" : "${battery_percent}% ",\
 		"color"     : "\#909737"\
 	},\
 	${endif}\
