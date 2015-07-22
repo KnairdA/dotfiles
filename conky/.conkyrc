@@ -39,6 +39,10 @@ TEXT
 	${else}\
 	${if_up wwp0s29u1u4i6}\
 	{\
+		"full_text" : "",\
+		"separator" : false\
+	},\
+	{\
 		"full_text" : "${addr wwp0s29u1u4i6}",\
 		"color"     : "\#909737",\
 		"separator" : false\

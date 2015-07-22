@@ -39,7 +39,7 @@ bindsym $mod+6 workspace 6
 bindsym $mod+7 workspace 7
 bindsym $mod+8 workspace 8
 bindsym $mod+9 workspace 9
-bindsym $mod+0 workspace 10
+bindsym $mod+0 workspace 0
 
 bindsym Control+Mod1+Right workspace next_on_output
 bindsym Control+Mod1+Left  workspace prev_on_output
@@ -54,7 +54,7 @@ bindsym $mod+Shift+ampersand  move container to workspace 6
 bindsym $mod+Shift+slash      move container to workspace 7
 bindsym $mod+Shift+parenleft  move container to workspace 8
 bindsym $mod+Shift+parenright move container to workspace 9
-bindsym $mod+Shift+equal      move container to workspace 10
+bindsym $mod+Shift+equal      move container to workspace 0
 
 bindsym $mod+r mode "resize"
 
