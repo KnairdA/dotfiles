@@ -6,7 +6,7 @@ let     g:colors_name  =              "akr"
 hi      Normal         gui=NONE       guifg=#F2F2F2  guibg=#161616
 hi      NonText        gui=NONE       guifg=#161616  guibg=#161616
 hi      LineNr         gui=NONE       guifg=#605c5a  guibg=NONE
-hi      Cursor         gui=reverse    guifg=NONE     guibg=NONE
+hi      Cursor         gui=NONE       guifg=#F2F2F2  guibg=#D80F33
 hi      CursorColumn   gui=NONE       guifg=NONE     guibg=#000000
 hi      CursorLine     gui=NONE       guifg=NONE     guibg=#212121
 hi      CursorLineNr   gui=NONE       guifg=#aadb0f  guibg=#212121
