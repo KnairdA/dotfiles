@@ -32,3 +32,12 @@ hi -link=s_normal,s_greenfont,s_grayback     Hint                               
 hi                                           HintElem                                 background:#a5a5a5;
 hi                                           Hint[active]                             background:#aadb0f;color:#161616;
 hi                                           HintActive                               background:#aadb0f;
+
+command! reader -js <<EOF
+if ( buffer.URL.spec.startsWith('about:reader?') ) {
+    dactyl.execute('back')
+} else {
+    dactyl.open('about:reader?url=' + encodeURIComponent(buffer.URL.spec))
+}
+EOF
+map -builtin -ex <F9> :reader
