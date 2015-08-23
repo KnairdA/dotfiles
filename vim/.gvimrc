@@ -6,3 +6,5 @@ set guioptions-=T
 set guioptions-=e
 
 set guifont=Dejavu\ Sans\ Mono\ 8
+
+let g:airline_powerline_fonts = 1
