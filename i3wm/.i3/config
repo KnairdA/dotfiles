@@ -111,6 +111,7 @@ bindsym Control+Mod1+l exec --no-startup-id i3lock -c 000000
 bindsym Control+Mod1+m exec --no-startup-id ~/.screenlayout/mobile.sh
 bindsym Control+Mod1+d exec --no-startup-id ~/.screenlayout/docked.sh
 bindsym Control+Mod1+v exec --no-startup-id ~/.screenlayout/docked_vertical.sh
+bindsym Control+Mod1+t exec --no-startup-id ~/.screenlayout/docked_tv_mode.sh
 
 bindsym $mod+n [title="^.*\.wiki \(~\/note\).*$"] scratchpad show
 
