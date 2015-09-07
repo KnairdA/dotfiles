@@ -122,6 +122,7 @@ exec --no-startup-id export $(gnome-keyring-daemon)
 exec --no-startup-id urxvtd
 exec --no-startup-id twmnd
 exec --no-startup-id nm-applet
+exec --no-startup-id volumeicon
 exec --no-startup-id feh --bg-center ~/.background.jpg
 exec --no-startup-id xautolock -time 5 -locker "i3lock -c 000000"
 exec --no-startup-id gvim ~/note/index.wiki
