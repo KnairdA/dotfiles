@@ -113,6 +113,8 @@ bindsym Control+Mod1+d exec --no-startup-id ~/.screenlayout/docked.sh
 bindsym Control+Mod1+v exec --no-startup-id ~/.screenlayout/docked_vertical.sh
 bindsym Control+Mod1+t exec --no-startup-id ~/.screenlayout/docked_tv_mode.sh
 
+bindsym Print exec --no-startup-id xfce4-screenshooter
+
 bindsym $mod+n [title="^.*\.wiki \(~\/note\).*$"] scratchpad show
 
 for_window [class="^.*"]                      border pixel 4
