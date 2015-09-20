@@ -42,7 +42,9 @@ bindsym $mod+9 workspace 9
 bindsym $mod+0 workspace 0
 
 bindsym Control+Mod1+Right workspace next_on_output
+bindsym Control+Mod1+l     workspace next_on_output
 bindsym Control+Mod1+Left  workspace prev_on_output
+bindsym Control+Mod1+h     workspace prev_on_output
 bindsym Control+Mod1+Down  move workspace to output right
 
 bindsym $mod+Shift+exclam     move container to workspace 1
@@ -107,7 +109,7 @@ bindsym $alt+space     exec --no-startup-id passman submitform
 bindsym $mod+space     exec --no-startup-id ~/.i3/dmenu_run.sh
 bindsym Control+space  exec --no-startup-id ~/.i3/apply_layout.sh
 
-bindsym Control+Mod1+l exec --no-startup-id i3lock -c 000000
+bindsym         Mod1+l exec --no-startup-id i3lock -c 000000
 bindsym Control+Mod1+m exec --no-startup-id ~/.screenlayout/mobile.sh
 bindsym Control+Mod1+d exec --no-startup-id ~/.screenlayout/docked.sh
 bindsym Control+Mod1+v exec --no-startup-id ~/.screenlayout/docked_vertical.sh
