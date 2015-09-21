@@ -4,7 +4,6 @@
 " * gundo.vim      -- visualize undo tree
 " * vim-airline    -- better status bar
 " * vim-unimpaired -- bracket mappings
-" * vim-csapprox   -- approximate color scheme for cli
 " * vim-gitgutter  -- display git diffs alongside line numbers
 " * vim-renamer    -- file renaming utility
 " * vim-vimwiki    -- makes it easier to manage e.g. notes
@@ -25,7 +24,7 @@ set mouse=a
 set background=dark
 set shell=/bin/sh
 
-colorscheme akr
+colorscheme jellybeans
 
 set directory=~/.vim/swap//,.
 
@@ -73,7 +72,6 @@ nnoremap <A-up> <C-W>k
 nnoremap <A-down> <C-W>j
 
 set laststatus=2
-let g:airline_theme                                = 'akr'
 let g:airline#extensions#tabline#enabled           = 1
 let g:airline#extensions#tabline#show_buffers      = 0
 let g:airline#extensions#tabline#show_tab_type     = 0
