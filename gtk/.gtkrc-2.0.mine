@@ -1,3 +1,9 @@
+gtk-theme-name        = "Greenbird"
+gtk-icon-theme-name   = "AwOkenDark"
+gtk-font-name         = "DejaVu Sans 9"
+gtk-cursor-theme-name = "DMZ-Black"
+gtk-cursor-theme-size = 0
+
 style "vimfix" {
 	bg[NORMAL] = "#161616"
 }
