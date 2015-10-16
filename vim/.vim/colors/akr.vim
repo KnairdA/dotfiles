@@ -48,7 +48,7 @@ hi      Conditional    gui=bold       guifg=#aadb0f  guibg=NONE
 hi      MatchParen     gui=bold       guifg=NONE     guibg=NONE
 
 hi      Special        gui=NONE       guifg=#808080  guibg=NONE
-hi      SpecialKey     gui=bold       guifg=#212121  guibg=NONE
+hi      SpecialKey     gui=bold       guifg=NONE     guibg=#212121
 
 hi      ColorColumn    gui=NONE       guifg=NONE     guibg=#000000
 hi      Conceal        gui=NONE       guifg=#808080  guibg=NONE

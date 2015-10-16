@@ -31,7 +31,7 @@ set directory=~/.vim/swap//,.
 set wrap
 set tabstop=4 shiftwidth=4
 set backspace=indent,eol,start
-set listchars=tab:\•\ 
+set listchars=tab:\ \ 
 set list
 set linebreak
 
