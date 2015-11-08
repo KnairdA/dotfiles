@@ -106,7 +106,6 @@ bindsym $mod+Return    exec urxvtc
 bindsym $alt+Return    exec gvim
 
 bindsym $alt+space     exec --no-startup-id passman submitform
-bindsym $mod+space     exec --no-startup-id ~/.i3/dmenu_run.sh
 bindsym Control+space  exec --no-startup-id ~/.i3/apply_layout.sh
 
 bindsym         Mod1+l exec --no-startup-id i3lock -c 000000
@@ -129,4 +128,5 @@ exec --no-startup-id nm-applet
 exec --no-startup-id volumeicon
 exec --no-startup-id feh --bg-center ~/.background.jpg
 exec --no-startup-id xautolock -time 5 -locker "i3lock -c 000000"
+exec --no-startup-id rofi -key-combi "$mod+space"
 exec --no-startup-id gvim ~/note/index.wiki

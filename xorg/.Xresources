@@ -47,3 +47,19 @@ URxvt.color14:               #46a4ff
 ! white
 URxvt.color7:                #F2F2F2
 URxvt.color15:               #ffffff
+
+!rofi configuration
+rofi.location:         2
+rofi.font:             Dejavu Sans Mono 11
+rofi.bg:               #222222
+rofi.fg:               #605c5a
+rofi.hlbg:             #111111
+rofi.hlfg:             #aadb0f
+rofi.bgalt:            #161616
+rofi.bc:               #909737
+rofi.bw:               4
+rofi.separator-style:  none
+rofi.hide-scrollbar:   true
+rofi.yoffset:          -4
+rofi.modi:             combi
+rofi.combi-modi:       window,run,ssh
