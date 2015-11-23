@@ -47,6 +47,10 @@ TEXT
 		"color"     : "\#909737",\
 		"separator" : false\
 	},\
+	{\
+		"full_text" : "(${exec mmcli -m 0 --simple-status | grep quality | grep -o '[0-9]\+' }%)",\
+		"separator" : false\
+	},\
 	${endif}\
 	${endif}\
 	${endif}\
