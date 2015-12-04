@@ -44,7 +44,9 @@ map <leader>s :let @/=""<CR>
 
 autocmd InsertEnter *   :setlocal nohlsearch
 autocmd InsertLeave *   :setlocal hlsearch
+
 autocmd FileType scheme  setlocal shiftwidth=2 tabstop=2 expandtab
+autocmd FileType java    setlocal shiftwidth=4 tabstop=4 expandtab
 autocmd FileType vimwiki setlocal noswapfile
 
 vnoremap cc "+y
