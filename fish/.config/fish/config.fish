@@ -1,7 +1,7 @@
 umask 0077
 
 set EDITOR vim
-set PATH $PATH /usr/local/texlive/2014/bin/x86_64-linux
+set PATH $PATH /usr/local/bin/ /usr/local/texlive/2014/bin/x86_64-linux
 
 set fish_greeting ""
 

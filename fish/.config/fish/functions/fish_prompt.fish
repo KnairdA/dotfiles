@@ -31,3 +31,9 @@ function fish_prompt
 		echo -n -s ' ▸ '
 	end
 end
+
+function fish_right_prompt
+	set_color $fish_color_autosuggestion
+	date '+%H:%M:%S'
+	set_color normal
+end
