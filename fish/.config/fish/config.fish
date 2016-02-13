@@ -7,6 +7,7 @@ set fish_greeting ""
 
 alias csi='csi -q'
 alias i='sxiv'
+alias dict='sdcv'
 
 eval (dircolors -c ~/.dir_colors)
 
