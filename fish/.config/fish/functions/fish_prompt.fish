@@ -25,10 +25,10 @@ function fish_prompt
 
 	if test $last_status -gt 0
 		set_color $fish_color_cwd_root
-		echo -n -s ' ▸ '
+		echo -n -s ' ‣ '
 		set_color normal
 	else
-		echo -n -s ' ▸ '
+		echo -n -s ' ‣ '
 	end
 end
 

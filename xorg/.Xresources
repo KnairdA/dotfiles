@@ -1,6 +1,6 @@
 URxvt.saveLines:             10000
 URxvt.scrollBar:             false
-URxvt.font:                  xft:Dejavu Sans Mono:size=8
+URxvt.font:                  xft:Fantasque Sans Mono:pixelsize=12
 URxvt.transparent:           false
 URxvt.inheritPixmap:         false
 URxvt.fading:                20
@@ -50,7 +50,7 @@ URxvt.color15:               #ffffff
 
 !rofi configuration
 rofi.location:         2
-rofi.font:             Dejavu Sans Mono 11
+rofi.font:             Fantasque Sans Mono 11
 rofi.bg:               #222222
 rofi.fg:               #605c5a
 rofi.hlbg:             #111111
