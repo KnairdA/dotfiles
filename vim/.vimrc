@@ -86,6 +86,8 @@ let g:airline#extensions#tabline#left_alt_sep      = ''
 let g:airline#extensions#tabline#right_sep         = ''
 let g:airline#extensions#tabline#right_alt_sep     = ''
 let g:airline#extensions#tabline#show_close_button = 0
+let g:airline#extensions#tabline#show_splits       = 0
+let g:airline#extensions#tabline#show_tab_nr       = 0
 
 let g:vimwiki_list              = [{'path': '~/note/'}]
 let g:gitgutter_enabled         = 0
