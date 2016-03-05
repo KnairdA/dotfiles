@@ -116,10 +116,10 @@ bindsym Control+Mod1+t exec --no-startup-id ~/.screenlayout/docked_tv_mode.sh
 
 bindsym Print exec --no-startup-id xfce4-screenshooter
 
-bindsym $mod+n [title="^.*\.wiki \(~\/note\).*$"] scratchpad show
+bindsym $mod+n [title="^.*\.wiki \(~\/note.*\).*$"] scratchpad show
 
 for_window [class="^.*"]                      border pixel 4
-for_window [title="^.*\.wiki \(~\/note\).*$"] floating enable; move to scratchpad
+for_window [title="^.*\.wiki \(~\/note.*\).*$"] floating enable; move to scratchpad
 
 exec --no-startup-id export $(gnome-keyring-daemon)
 exec --no-startup-id urxvtd
