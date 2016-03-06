@@ -49,7 +49,7 @@ autocmd InsertLeave *      :setlocal hlsearch
 autocmd FocusGained *.wiki :redraw!
 
 autocmd FileType scheme  setlocal shiftwidth=2 tabstop=2 expandtab
-autocmd FileType vimwiki setlocal noswapfile
+autocmd FileType vimwiki setlocal noswapfile nonumber foldcolumn=1 autoread
 
 vnoremap cc "+y
 nnoremap cc "+p
@@ -89,7 +89,13 @@ let g:airline#extensions#tabline#show_close_button = 0
 let g:airline#extensions#tabline#show_splits       = 0
 let g:airline#extensions#tabline#show_tab_nr       = 0
 
-let g:vimwiki_list              = [{'path': '~/note/'}]
+let g:vimwiki_list = [{
+	\ 'path':             '~/note/',
+	\ 'path_html':        '~/share/note/',
+	\ 'template_path':    '~/share/note/assets/',
+	\ 'template_default': 'default',
+	\ 'template_ext':     '.tpl' }]
+
 let g:gitgutter_enabled         = 0
 let g:gitgutter_highlight_lines = 1
 let g:goyo_width                = 90
@@ -101,4 +107,6 @@ nnoremap <F6>  :GitGutterToggle<CR>
 nnoremap <F7>  :set cursorline!<CR>
 nnoremap <F12> :Goyo<CR>
 
-map <leader>t :VimwikiToggleListItem<CR>
+map  <leader>t :VimwikiToggleListItem<CR>
+nmap <leader>wtl <Plug>VimwikiTableMoveColumnLeft
+nmap <leader>wtr <Plug>VimwikiTableMoveColumnRight
