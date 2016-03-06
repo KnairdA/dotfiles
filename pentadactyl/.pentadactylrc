@@ -35,9 +35,27 @@ hi                                           HintActive                         
 
 command! reader -js <<EOF
 if ( buffer.URL.spec.startsWith('about:reader?') ) {
-    dactyl.execute('back')
+	dactyl.execute('back')
 } else {
-    dactyl.open('about:reader?url=' + encodeURIComponent(buffer.URL.spec))
+	dactyl.open('about:reader?url=' + encodeURIComponent(buffer.URL.spec))
 }
 EOF
 map -builtin -ex <F9> :reader
+
+command! push2inbox -js <<EOF
+function escape(msg) {
+	return msg.replace(/([^a-zA-Z0-9_])/g, "\\$1");
+}
+
+var selection = content.getSelection().toString();
+var entry     = '\\* ' + escape(buffer.URL);
+
+if ( selection ) {
+	entry += '\\n\\t\\* ' + escape(selection);
+} else if ( content.document.title ) {
+	entry += '\\n\\t\\* ' + escape(content.document.title);
+}
+
+dactyl.execute('!echo ' + entry + ' >> ~/note/src/web/inbox.wiki');
+EOF
+nmap b :push2inbox<CR>
