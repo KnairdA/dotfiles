@@ -59,3 +59,18 @@ if ( selection ) {
 dactyl.execute('!echo ' + entry + ' >> ~/note/src/web/inbox.wiki');
 EOF
 nmap b :push2inbox<CR>
+
+command! cite -js <<EOF
+function escape(msg) {
+	return msg.replace(/([^a-zA-Z0-9_])/g, "\\$1");
+}
+
+var entry = '\\n'
+          + '\\ \\ \\ \\ \\[...\\] ' + escape(content.getSelection().toString()) + ' \\[...\\]\\n'
+          + '\\ \\ \\ \\ \\<br\\/\\>\\<br\\/\\>\\n'
+          + '\\ \\ \\ \\ ― ' + escape(buffer.URL)
+          + '\\n';
+
+dactyl.execute('!echo ' + entry + ' >> ~/note/src/web/inbox.wiki');
+EOF
+nmap c :cite<CR>
