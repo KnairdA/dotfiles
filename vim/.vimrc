@@ -21,6 +21,7 @@ set number
 set lazyredraw
 set ttyfast
 set mouse=a
+set t_Co=256
 set background=dark
 set shell=/bin/sh
 
