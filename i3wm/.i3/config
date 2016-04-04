@@ -79,6 +79,7 @@ bar {
 	status_command ~/.conky.sh
 	workspace_buttons yes
 	tray_output LVDS1
+
 	font pango:Fantasque Sans Mono 16px
 
 	colors {
@@ -107,6 +108,7 @@ bindsym $alt+Return    exec gvim
 
 bindsym $alt+space     exec --no-startup-id passman submitform
 bindsym Control+space  exec --no-startup-id ~/.i3/apply_layout.sh
+bindsym $mod+c         exec --no-startup-id =
 
 bindsym         Mod1+l exec --no-startup-id i3lock -c 000000
 bindsym Control+Mod1+m exec --no-startup-id ~/.screenlayout/mobile.sh
