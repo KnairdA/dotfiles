@@ -123,7 +123,7 @@ bindsym $mod+z [title="^.*- Zeal$"]                     scratchpad show
 
 for_window [class="^.*"]                            border pixel 4
 for_window [title="^.*\.wiki \(~\/note.*\).*GVIM$"] border pixel 8; floating enable; move to scratchpad
-for_window [title="^.*- Zeal$"]                     border pixel 8; floating enable; move to scratchpad
+for_window [title="^.*- Zeal$"]                     border pixel 8; floating enable; move position 160px 46px; move to scratchpad
 
 exec --no-startup-id export $(gnome-keyring-daemon)
 exec --no-startup-id urxvtd
