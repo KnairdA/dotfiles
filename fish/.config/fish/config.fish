@@ -11,9 +11,3 @@ alias dict='sdcv'
 alias mp3-dl='youtube-dl --extract-audio --audio-format mp3'
 
 eval (dircolors -c ~/.dir_colors)
-
-if status --is-login
-	if test -z "$DISPLAY" -a $XDG_VTNR = 1
-		exec startx
-	end
-end
