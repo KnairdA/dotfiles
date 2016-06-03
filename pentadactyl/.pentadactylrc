@@ -43,34 +43,26 @@ EOF
 map -builtin -ex <F9> :reader
 
 command! push2inbox -js <<EOF
-function escape(msg) {
-	return msg.replace(/([^a-zA-Z0-9_])/g, "\\$1");
-}
-
 var selection = content.getSelection().toString();
-var entry     = '\\* ' + escape(buffer.URL);
+var entry     = '\* ' + buffer.URL;
 
 if ( selection ) {
-	entry += '\\n\\t\\* ' + escape(selection);
+	entry += '\\n\\t\* ' + selection;
 } else if ( content.document.title ) {
-	entry += '\\n\\t\\* ' + escape(content.document.title);
+	entry += '\\n\\t\* ' + content.document.title;
 }
 
-dactyl.execute('!echo ' + entry + ' >> ~/note/src/web/inbox.wiki');
+dactyl.execute('!echo -e "' + entry + '" >> ~/note/src/web/inbox.wiki');
 EOF
 nmap b :push2inbox<CR>
 
 command! cite -js <<EOF
-function escape(msg) {
-	return msg.replace(/([^a-zA-Z0-9_])/g, "\\$1");
-}
-
 var entry = '\\n'
-          + '\\ \\ \\ \\ \\[...\\] ' + escape(content.getSelection().toString()) + ' \\[...\\]\\n'
-          + '\\ \\ \\ \\ \\<br\\/\\>\\<br\\/\\>\\n'
-          + '\\ \\ \\ \\ ― ' + escape(buffer.URL)
+          + '\ \ \ \ \[...\] ' + content.getSelection().toString() + ' \[...\]\\n'
+          + '\ \ \ \ \<br\/\>\<br\/\>\\n'
+          + '\ \ \ \ ― ' + buffer.URL
           + '\\n';
 
-dactyl.execute('!echo ' + entry + ' >> ~/note/src/web/inbox.wiki');
+dactyl.execute('!echo -e "' + entry + '" >> ~/note/src/web/inbox.wiki');
 EOF
 nmap c :cite<CR>
