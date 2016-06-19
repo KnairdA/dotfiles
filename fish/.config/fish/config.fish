@@ -11,3 +11,4 @@ alias dict='sdcv'
 alias mp3-dl='youtube-dl --extract-audio --audio-format mp3'
 
 eval (dircolors -c ~/.dir_colors)
+eval (python -m virtualfish)

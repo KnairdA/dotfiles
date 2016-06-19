@@ -23,6 +23,10 @@ function fish_prompt
 
 	echo -n -s 'λ ' "$__fish_prompt_cwd" (prompt_pwd) "$__fish_prompt_normal"
 
+	if set -q VIRTUAL_ENV
+		echo -n -s ' (' (basename "$VIRTUAL_ENV") ') '
+	end
+
 	if test $last_status -gt 0
 		set_color $fish_color_cwd_root
 		echo -n -s ' ‣ '
@@ -30,10 +34,4 @@ function fish_prompt
 	else
 		echo -n -s ' ‣ '
 	end
-end
-
-function fish_right_prompt
-	set_color $fish_color_autosuggestion
-	date '+%H:%M:%S'
-	set_color normal
 end
