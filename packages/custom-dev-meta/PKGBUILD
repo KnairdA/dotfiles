@@ -1,0 +1,51 @@
+pkgname=custom-dev-meta
+pkgver=0.1
+pkgrel=1
+pkgdesc='Meta package to install my development setup'
+url='https://code.kummerlaender.eu/dotfiles/'
+arch=('any')
+
+depends=(
+	make
+	cmake
+	autoconf
+	automake
+	boost
+	picocom
+	boost.process-svn
+	cgdb
+	protobuf
+	leveldb
+	clisp
+	chicken
+	mit-scheme
+	pandoc
+	gtest
+	strace
+	valgrind
+	clang
+	gdb
+	gcc-ada
+	gcc-multilib
+	gitg
+	xalan-c
+	xerces-c
+	ruby-kramdown
+	peg-markdown
+	mono
+	nuget
+	maxima
+	gnuplot
+	graphviz
+	highlight
+	phantomjs
+	nodejs
+	npm
+	imagemagick
+	gdc
+	ghc
+	cabal-install
+	go
+	jdk7-openjdk
+	java-repl-git
+)

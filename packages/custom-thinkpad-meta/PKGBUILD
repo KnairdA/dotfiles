@@ -1,0 +1,34 @@
+pkgname=custom-thinkpad-meta
+pkgver=0.1
+pkgrel=1
+pkgdesc='Meta package to install Thinkpad specific packages, i.e. they may not be required on other systems'
+url='https://code.kummerlaender.eu/dotfiles/'
+arch=('any')
+
+depends=(
+	acpi
+	acpi_call
+	lm_sensors
+	tlp
+	tlp-rdw
+	tp_smapi
+	xf86-video-intel
+	xf86-input-synaptics
+	wavemon
+	smartmontools
+	blueman
+	bluez
+	bluez-firmware
+	bluez-hid2hci
+	bluez-plugins
+	bluez-utils
+	modemmanager
+	networkmanager
+	chrony
+	networkmanager-dispatcher-chrony
+	networkmanager-openvpn
+	cups
+	epson-inkjet-printer-201212w
+	thermald-git
+	tpacpi-bat-git
+)

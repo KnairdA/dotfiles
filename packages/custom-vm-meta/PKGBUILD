@@ -1,0 +1,16 @@
+pkgname=custom-vm-meta
+pkgver=0.1
+pkgrel=1
+pkgdesc='Meta package to install packages related to virtualization' 
+url='https://code.kummerlaender.eu/dotfiles/'
+arch=('any')
+
+depends=(
+	qemu
+	vde2
+	gtk-vnc
+	net-tools
+	bridge-utils
+	virtualbox
+	virtualbox-host-dkms
+)

@@ -1,0 +1,77 @@
+pkgname=custom-ui-meta
+pkgver=0.1
+pkgrel=1
+pkgdesc='Meta package to install my UI setup'
+url='https://code.kummerlaender.eu/dotfiles/'
+arch=('any')
+
+depends=(
+	i3-wm
+	i3lock
+	i3status
+	xautolock
+	rxvt-unicode
+	urxvt-perls
+	conky
+	gvim
+	vim-vimwiki-git
+	volumeicon
+	feh
+	notification-daemon
+	pcmanfm
+	arandr
+	awoken-icons
+	baobab
+	cairo
+	calibre
+	cantor
+	zathura
+	zathura-pdf-poppler
+	polkit-gnome
+	network-manager-applet
+	modem-manager-gui
+	firefox
+	chromium
+	opera-developer
+	gtk-engine-murrine
+	chromium-pepper-flash
+	telegram-desktop-bin
+	gimp
+	xfce4-screenshooter
+	lxappearance-gtk3
+	akonadi-fake
+	akonadi-fake-qt4
+	thunderbird
+	musicbrainz
+	picard
+	vlc
+	mplayer
+	mpv
+	mupdf
+	marble
+	viking
+	gpsprune_bin
+	gwenview
+	kchmviewer
+	kdegraphics-okular
+	gnome-disk-utility
+	seahorse
+	gnome-keyring
+	gnome-power-manager
+	syncthing-gtk
+	wireshark-qt
+	synergy
+	screenfetch
+	redshift
+	libreoffice-still
+	libreoffice-still-de
+	texmaker
+	oomox-git
+	pentadactyl-git
+	treesheets-git
+	zeal-git
+	sxiv-bskv-git
+	rofi-git
+	twmn-git
+	youtube-dl
+)
