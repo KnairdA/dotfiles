@@ -58,11 +58,11 @@ nmap b :push2inbox<CR>
 
 command! cite -js <<EOF
 var entry = '\\n'
-          + '\ \ \ \ \[...\] ' + content.getSelection().toString() + ' \[...\]\\n'
-          + '\ \ \ \ \<br\/\>\<br\/\>\\n'
-          + '\ \ \ \ ― ' + buffer.URL
+          + '    [...] ' + content.getSelection().toString().replace('\n', '\n    ') + ' [...]\\n'
+          + '    <br/>\<br/>\\n'
+          + '     ― ' + buffer.URL
           + '\\n';
 
-dactyl.execute('!echo -e "' + entry + '" >> ~/note/src/web/inbox.wiki');
+dactyl.execute('!echo -e "' + entry.replace('"', '\"') + '" >> ~/note/src/web/inbox.wiki');
 EOF
 nmap c :cite<CR>
