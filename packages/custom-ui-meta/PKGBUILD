@@ -2,7 +2,7 @@ pkgname=custom-ui-meta
 pkgver=0.1
 pkgrel=1
 pkgdesc='Meta package to install my UI setup'
-url='https://code.kummerlaender.eu/dotfiles/'
+url='https://code.kummerlaender.eu/Dotfiles/'
 arch=('any')
 
 depends=(

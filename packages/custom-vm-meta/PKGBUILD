@@ -2,7 +2,7 @@ pkgname=custom-vm-meta
 pkgver=0.1
 pkgrel=1
 pkgdesc='Meta package to install packages related to virtualization' 
-url='https://code.kummerlaender.eu/dotfiles/'
+url='https://code.kummerlaender.eu/Dotfiles/'
 arch=('any')
 
 depends=(

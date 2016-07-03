@@ -1,8 +1,8 @@
 pkgname=custom-thinkpad-meta
 pkgver=0.1
-pkgrel=1
+pkgrel=2
 pkgdesc='Meta package to install Thinkpad specific packages, i.e. they may not be required on other systems'
-url='https://code.kummerlaender.eu/dotfiles/'
+url='https://code.kummerlaender.eu/Dotfiles/'
 arch=('any')
 
 depends=(
@@ -24,8 +24,6 @@ depends=(
 	bluez-utils
 	modemmanager
 	networkmanager
-	chrony
-	networkmanager-dispatcher-chrony
 	networkmanager-openvpn
 	cups
 	epson-inkjet-printer-201212w
