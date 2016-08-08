@@ -1,0 +1,7 @@
+image/              = sxiv
+video/              = mpv
+audio/              = mplayer::urxvtc
+text/               = gvim
+application/pdf     = zathura
+inode/directory     = ranger?:urxvtc
+@^(https?://|www\.) = firefox

@@ -1,6 +1,6 @@
 pkgname=custom-ui-meta
 pkgver=0.1
-pkgrel=1
+pkgrel=2
 pkgdesc='Meta package to install my UI setup'
 url='https://code.kummerlaender.eu/Dotfiles/'
 arch=('any')
@@ -15,6 +15,7 @@ depends=(
 	conky
 	gvim
 	vim-vimwiki-git
+	busking-git
 	volumeicon
 	feh
 	notification-daemon
@@ -51,7 +52,6 @@ depends=(
 	marble
 	viking
 	gpsprune_bin
-	gwenview
 	kchmviewer
 	kdegraphics-okular
 	gnome-disk-utility

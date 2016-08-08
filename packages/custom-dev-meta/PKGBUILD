@@ -1,6 +1,6 @@
 pkgname=custom-dev-meta
 pkgver=0.1
-pkgrel=1
+pkgrel=2
 pkgdesc='Meta package to install my development setup'
 url='https://code.kummerlaender.eu/Dotfiles/'
 arch=('any')
@@ -41,6 +41,7 @@ depends=(
 	phantomjs
 	nodejs
 	npm
+	typescript
 	imagemagick
 	gdc
 	ghc
