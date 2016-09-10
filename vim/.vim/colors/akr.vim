@@ -80,4 +80,15 @@ hi      xmlAttrib      gui=NONE       guifg=#F2F2F2  guibg=NONE
 
 hi      vimwikiLink    gui=underline  guifg=#aadb0f  guibg=NONE
 
+hi      texSection      gui=bold       guifg=#aadb0f  guibg=NONE
+hi      texMathZoneX    gui=NONE       guifg=NONE     guibg=#000000
+hi      texMathSymbol   gui=bold       guifg=NONE     guibg=#000000
+hi      texTypeStyle    gui=bold       guifg=NONE     guibg=#000000
+hi      texStatement    gui=bold       guifg=NONE     guibg=NONE
+hi      texGreek        gui=NONE       guifg=NONE     guibg=#000000
+hi      texBeginEnd     gui=NONE       guifg=#aadb0f  guibg=NONE
+hi      texSubscript    gui=NONE       guifg=NONE     guibg=#000000
+hi      texSuperscript  gui=NONE       guifg=NONE     guibg=#000000
+hi      texBeginEndName gui=NONE       guifg=NONE     guibg=NONE
+
 match   SpecialKey     '^\s\+'
