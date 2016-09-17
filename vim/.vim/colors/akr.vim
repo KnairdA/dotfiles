@@ -48,7 +48,7 @@ hi      Conditional    gui=bold       guifg=#aadb0f  guibg=NONE
 hi      MatchParen     gui=bold       guifg=NONE     guibg=NONE
 
 hi      Special        gui=NONE       guifg=#808080  guibg=NONE
-hi      SpecialKey     gui=bold       guifg=NONE     guibg=#212121
+hi      SpecialKeyTab  gui=NONE       guifg=NONE     guibg=#212121
 
 hi      ColorColumn    gui=NONE       guifg=NONE     guibg=#000000
 hi      Conceal        gui=NONE       guifg=#808080  guibg=NONE
@@ -82,7 +82,10 @@ hi      vimwikiLink    gui=underline  guifg=#aadb0f  guibg=NONE
 
 hi      texSection      gui=bold       guifg=#aadb0f  guibg=NONE
 hi      texMathZoneX    gui=NONE       guifg=NONE     guibg=#000000
+hi      texMathText     gui=NONE       guifg=NONE     guibg=#000000
 hi      texMathSymbol   gui=bold       guifg=NONE     guibg=#000000
+hi      texMathOper     gui=bold       guifg=#aadb0f  guibg=#000000
+hi      texMathMatcher  gui=NONE       guifg=NONE     guibg=#000000
 hi      texTypeStyle    gui=bold       guifg=NONE     guibg=#000000
 hi      texStatement    gui=bold       guifg=NONE     guibg=NONE
 hi      texGreek        gui=NONE       guifg=NONE     guibg=#000000

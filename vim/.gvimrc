@@ -3,6 +3,7 @@ set guioptions=agim
 set guioptions-=m
 
 colorscheme akr
+2match SpecialKeyTab /\t/
 
 let g:airline_theme           = 'akr'
 let g:airline_powerline_fonts = 1
