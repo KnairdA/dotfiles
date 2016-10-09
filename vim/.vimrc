@@ -50,6 +50,7 @@ autocmd InsertLeave *      :setlocal hlsearch
 autocmd FocusGained *.wiki :redraw!
 
 autocmd FileType scheme  setlocal shiftwidth=2 tabstop=2 expandtab
+autocmd FileType racket  setlocal shiftwidth=2 tabstop=2 expandtab
 autocmd FileType vimwiki setlocal noswapfile nonumber foldcolumn=1 autoread
 autocmd FileType vimwiki let      g:airline#extensions#whitespace#checks=['indent', 'trailing', 'long']
 

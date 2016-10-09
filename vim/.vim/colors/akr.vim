@@ -94,4 +94,6 @@ hi      texSubscript    gui=NONE       guifg=NONE     guibg=#000000
 hi      texSuperscript  gui=NONE       guifg=NONE     guibg=#000000
 hi      texBeginEndName gui=NONE       guifg=NONE     guibg=NONE
 
+hi      prologClauseHead gui=NONE      guifg=#aadb0f  guibg=NONE
+
 match   SpecialKey     '^\s\+'
