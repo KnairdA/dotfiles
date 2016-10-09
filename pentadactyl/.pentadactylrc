@@ -40,7 +40,6 @@ if ( buffer.URL.spec.startsWith('about:reader?') ) {
 	dactyl.open('about:reader?url=' + encodeURIComponent(buffer.URL.spec))
 }
 EOF
-map -builtin -ex <F9> :reader
 
 command! push2inbox -js <<EOF
 var selection = content.getSelection().toString();
@@ -54,8 +53,6 @@ if ( selection ) {
 
 dactyl.execute('!echo -e "' + entry + '" >> ~/note/src/web/inbox.wiki');
 EOF
-nmap b :push2inbox<CR>
-
 command! cite -js <<EOF
 var entry = '\\n'
           + '    [...] ' + content.getSelection().toString().replace('\n', '\n    ') + ' [...]\\n'
@@ -65,4 +62,9 @@ var entry = '\\n'
 
 dactyl.execute('!echo -e "' + entry.replace('"', '\"') + '" >> ~/note/src/web/inbox.wiki');
 EOF
+
+map -builtin -ex <F9>  :reader
+map -builtin -ex <F10> :emenu ScrapBook X.Show in Sidebar
+
+nmap b :emenu ScrapBook X.Save Page<CR>
 nmap c :cite<CR>
