@@ -2,6 +2,7 @@
 " * pathogen       -- autoload other plugins
 " * ctrlp.vim      -- fuzzy file search
 " * gundo.vim      -- visualize undo tree
+" * nertree        -- nicer file browser with sidebar support
 " * vim-airline    -- better status bar
 " * vim-unimpaired -- bracket mappings
 " * vim-gitgutter  -- display git diffs alongside line numbers
@@ -106,6 +107,7 @@ let g:goyo_width                = 90
 let g:goyo_margin_top           = 1
 let g:goyo_margin_bottom        = 0
 
+nnoremap <F4>  :NERDTreeToggle<CR>
 nnoremap <F5>  :GundoToggle<CR>
 nnoremap <F6>  :GitGutterToggle<CR>
 nnoremap <F7>  :set cursorline!<CR>
