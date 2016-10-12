@@ -7,7 +7,6 @@ set fish_greeting ""
 
 alias csi='csi -q'
 alias i='sxiv'
-alias dict='sdcv'
 alias mp3-dl='youtube-dl --extract-audio --audio-format mp3'
 alias weather='curl wttr.in/Karlsruhe'
 

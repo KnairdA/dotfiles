@@ -109,6 +109,7 @@ bindsym $alt+Return    exec gvim
 bindsym $alt+space     exec passman submitform
 bindsym Control+space  exec ~/.i3/apply_layout.sh
 bindsym $mod+c         exec =
+bindsym $mod+m         exec rofi_dict
 bindsym Print          exec xfce4-screenshooter
 
 bindsym         Mod1+l exec --no-startup-id i3lock -c 000000
@@ -121,6 +122,7 @@ bindsym $mod+n [title="^.*\.wiki \(~\/note.*\).*GVIM$"] scratchpad show
 bindsym $mod+z [title="^.*- Zeal$"]                     scratchpad show
 
 for_window [class="^.*"]                            border pixel 4
+for_window [title="^dictionary$"]                   floating enable
 for_window [title="^.*\.wiki \(~\/note.*\).*GVIM$"] border pixel 8; floating enable; move to scratchpad
 for_window [title="^.*- Zeal$"]                     border pixel 8; floating enable; move position 160px 46px; move to scratchpad
 
