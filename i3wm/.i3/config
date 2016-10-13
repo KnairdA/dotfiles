@@ -102,6 +102,11 @@ client.unfocused        #222222 #222222 #999999
 client.urgent           #a5a5a5 #a5a5a5 #2e3436
 client.background       #161616
 
+for_window [class="^.*"]                            border pixel 4
+for_window [title="^dictionary$"]                   floating enable
+for_window [title="^.*\.wiki \(~\/note.*\).*GVIM$"] border pixel 8; floating enable; move to scratchpad
+for_window [title="^.*- Zeal$"]                     border pixel 8; floating enable; move position 160px 46px; move to scratchpad
+
 bindsym Control+Return exec urxvtc -title "Chicken Scheme REPL" -e csi -q
 bindsym $mod+Return    exec urxvtc
 bindsym $alt+Return    exec gvim
@@ -121,10 +126,7 @@ bindsym Control+Mod1+t exec --no-startup-id ~/.screenlayout/docked_tv_mode.sh
 bindsym $mod+n [title="^.*\.wiki \(~\/note.*\).*GVIM$"] scratchpad show
 bindsym $mod+z [title="^.*- Zeal$"]                     scratchpad show
 
-for_window [class="^.*"]                            border pixel 4
-for_window [title="^dictionary$"]                   floating enable
-for_window [title="^.*\.wiki \(~\/note.*\).*GVIM$"] border pixel 8; floating enable; move to scratchpad
-for_window [title="^.*- Zeal$"]                     border pixel 8; floating enable; move position 160px 46px; move to scratchpad
+bindsym $alt+n exec --no-startup-id sh -c "echo -e \$(xsel -o) '\n' >> ~/note/src/misc/inbox.wiki"
 
 exec --no-startup-id export $(gnome-keyring-daemon)
 exec --no-startup-id urxvtd
