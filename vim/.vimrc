@@ -1,14 +1,15 @@
 " The following plugins are expected to be installed:
-" * pathogen       -- autoload other plugins
-" * ctrlp.vim      -- fuzzy file search
-" * gundo.vim      -- visualize undo tree
-" * nertree        -- nicer file browser with sidebar support
-" * vim-airline    -- better status bar
-" * vim-unimpaired -- bracket mappings
-" * vim-gitgutter  -- display git diffs alongside line numbers
-" * vim-renamer    -- file renaming utility
-" * vim-vimwiki    -- makes it easier to manage e.g. notes
-" * goyo.vim       -- undistracted writing mode
+" * pathogen          -- autoload other plugins
+" * ctrlp.vim         -- fuzzy file search
+" * gundo.vim         -- visualize undo tree
+" * nertree           -- nicer file browser with sidebar support
+" * vim-airline       -- better status bar
+" * vim-unimpaired    -- bracket mappings
+" * vim-gitgutter     -- display git diffs alongside line numbers
+" * vim-renamer       -- file renaming utility
+" * vim-vimwiki       -- makes it easier to manage e.g. notes
+" * goyo.vim          -- undistracted writing mode
+" * vim-matlab-behave -- add basic matlab support
 
 call pathogen#infect()
 
@@ -106,6 +107,7 @@ let g:gitgutter_highlight_lines = 1
 let g:goyo_width                = 90
 let g:goyo_margin_top           = 1
 let g:goyo_margin_bottom        = 0
+let g:matlab_behave_paste_cmd   = "alt+v"
 
 nnoremap <F4>  :NERDTreeToggle<CR>
 nnoremap <F5>  :GundoToggle<CR>

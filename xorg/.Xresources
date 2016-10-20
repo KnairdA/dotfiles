@@ -23,6 +23,9 @@ URxvt.keysym.M-Right:        \033[1;3C
 URxvt.background:            #161616
 URxvt.foreground:            #F2F2F2
 
+URxvt.keysym.M-c:            perl:clipboard:copy
+URxvt.keysym.M-v:            perl:clipboard:paste
+
 ! black
 URxvt.color0:                #161616
 URxvt.color8:                #F2F2F2
