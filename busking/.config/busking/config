@@ -1,6 +1,7 @@
 image/              = sxiv
 video/              = mpv
 audio/              = mplayer::urxvtc
+text/html           = firefox
 text/               = gvim
 application/pdf     = zathura
 inode/directory     = ranger?:urxvtc
