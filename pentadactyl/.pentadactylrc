@@ -55,9 +55,14 @@ var entry = '\\n'
 dactyl.execute('!echo -e "' + entry.replace('"', '\"') + '" >> ~/note/src/quote/inbox.wiki');
 EOF
 
+command! explore -js <<EOF
+dactyl.execute('!random-bookmark');
+EOF
+
 map -builtin -ex <F8>  :reader
 map -builtin -ex <F9>  :emenu View.Tabbar
 map -builtin -ex <F10> :emenu ScrapBook X.Show in Sidebar
 
 nmap b :emenu ScrapBook X.Save Page<CR>
 nmap c :cite<CR>
+nmap e :explore<CR>
