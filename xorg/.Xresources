@@ -54,15 +54,15 @@ URxvt.color15:               #ffffff
 !rofi configuration
 rofi.location:         2
 rofi.font:             Fantasque Sans Mono 11
-rofi.bg:               #222222
-rofi.fg:               #605c5a
-rofi.hlbg:             #111111
-rofi.hlfg:             #aadb0f
-rofi.bgalt:            #161616
-rofi.bc:               #909737
+rofi.color-enabled:    true
+rofi.color-window:     #222222, #909737, #000000
+rofi.color-normal:     #222222, #8e8e8e, #161616, #111111, #aadb0f
+rofi.color-active:     #222222, #8e8e8e, #161616, #111111, #aadb0f
+rofi.color-urgent:     #222222, #dc322f, #161616, #dc322f, #161616
 rofi.bw:               4
 rofi.separator-style:  none
 rofi.hide-scrollbar:   true
 rofi.yoffset:          -4
 rofi.modi:             combi
 rofi.combi-modi:       window,run,ssh
+rofi.run-command:      fish -c '{cmd}'
