@@ -1,0 +1,18 @@
+#!/bin/sh
+
+terminal="urxvtc -title dictionary -borderwidth 10 -e"
+tmpfile="/tmp/ddict.lookup.$$"
+word=$(cat /usr/share/dict/words | rofi -dmenu -p 'dict:')
+
+while [[ $word != "" ]]; do
+	result=$(dict "$word" 2>&1)
+
+	if [[ $? -eq 21 ]]; then
+		word=$(echo -e "$result" | cut -d: -f2 | xargs -n1 | sort -u -f | rofi -dmenu -p 'similar:')
+	else
+		echo -e "$result" > "$tmpfile"
+		break
+	fi
+done
+
+$terminal less "$tmpfile"

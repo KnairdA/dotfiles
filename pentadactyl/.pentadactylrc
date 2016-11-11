@@ -61,7 +61,7 @@ EOF
 
 map -builtin -ex <F8>  :reader
 map -builtin -ex <F9>  :emenu View.Tabbar
-map -builtin -ex <F10> :emenu ScrapBook X.Show in Sidebar
+map -builtin -ex <F10> :sidebar Scrapbook X
 
 nmap b :emenu ScrapBook X.Save Page<CR>
 nmap c :cite<CR>
