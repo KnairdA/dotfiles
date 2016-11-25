@@ -111,12 +111,11 @@ bindsym Control+Return exec urxvtc -title "Chicken Scheme REPL" -e csi -q
 bindsym $mod+Return    exec urxvtc
 bindsym $alt+Return    exec gvim
 
+bindsym Control+space  exec rofi_dict
 bindsym $mod+space     exec "rofi -modi run,ssh,window -show combi"
 bindsym $alt+space     exec passman submitform
-bindsym Control+space  exec ~/.i3/apply_layout.sh
-bindsym $mod+c         exec =
-bindsym $mod+m         exec rofi_dict
-bindsym Print          exec xfce4-screenshooter
+
+bindsym Print exec xfce4-screenshooter
 
 bindsym         Mod1+l exec --no-startup-id i3lock -c 000000
 bindsym Control+Mod1+m exec --no-startup-id ~/.screenlayout/mobile.sh
@@ -124,6 +123,8 @@ bindsym Control+Mod1+d exec --no-startup-id ~/.screenlayout/docked.sh
 bindsym Control+Mod1+v exec --no-startup-id ~/.screenlayout/docked_vertical.sh
 bindsym Control+Mod1+t exec --no-startup-id ~/.screenlayout/docked_tv_mode.sh
 
+bindsym $mod+c exec =
+bindsym $mod+t exec ~/.i3/apply_layout.sh
 bindsym $mod+n [title="^.*\.wiki \(~\/note.*\).*GVIM$"] scratchpad show
 bindsym $mod+z [title="^.*- Zeal$"]                     scratchpad show
 
