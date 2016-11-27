@@ -35,24 +35,12 @@ hi                                           HintActive                         
 
 hi                                           Button                                   color:white;
 
-style -name ublick * #nav-bar * {visibility:visible}
-
 command! reader -js <<EOF
 if ( buffer.URL.spec.startsWith('about:reader?') ) {
 	dactyl.execute('back')
 } else {
 	dactyl.open('about:reader?url=' + encodeURIComponent(buffer.URL.spec))
 }
-EOF
-
-command! cite -js <<EOF
-var entry = '\\n'
-          + '    [...] ' + content.getSelection().toString().replace('\n', '\n    ') + ' [...]\\n'
-          + '    <br/>\<br/>\\n'
-          + '     ― ' + buffer.URL
-          + '\\n';
-
-dactyl.execute('!echo -e "' + entry.replace('"', '\"') + '" >> ~/note/src/quote/inbox.wiki');
 EOF
 
 command! explore -js <<EOF
@@ -65,5 +53,4 @@ map -builtin -ex <F10> :sidebar Scrapbook X
 
 nmap a :emenu ScrapBook X.Save Page<CR>
 nmap b :emenu ScrapBook X.Save As Bookmark...<CR>
-nmap c :cite<CR>
 nmap e :explore<CR>
