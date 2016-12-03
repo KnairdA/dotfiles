@@ -4,6 +4,7 @@ URxvt.font:                  xft:Fantasque Sans Mono:pixelsize=12
 URxvt.transparent:           false
 URxvt.inheritPixmap:         false
 URxvt.fading:                20
+URxvt.dynamicColors:         on
 
 URxvt.perl-ext-common:       default,matcher,clipboard
 URxvt.matcher.button:        1
@@ -20,11 +21,11 @@ URxvt.keysym.M-Up:           \033[1;3A
 URxvt.keysym.M-Left:         \033[1;3D
 URxvt.keysym.M-Right:        \033[1;3C
 
-URxvt.background:            #161616
-URxvt.foreground:            #F2F2F2
-
 URxvt.keysym.M-c:            perl:clipboard:copy
 URxvt.keysym.M-v:            perl:clipboard:paste
+
+URxvt.background:            #161616
+URxvt.foreground:            #F2F2F2
 
 ! black
 URxvt.color0:                #161616
