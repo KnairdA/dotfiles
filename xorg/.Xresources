@@ -24,6 +24,10 @@ URxvt.keysym.M-Right:        \033[1;3C
 URxvt.keysym.M-c:            perl:clipboard:copy
 URxvt.keysym.M-v:            perl:clipboard:paste
 
+URxvt.keysym.Control-minus:  command:\033]710;xft:Fantasque Sans Mono:pixelsize=10\007
+URxvt.keysym.Control-0:      command:\033]710;xft:Fantasque Sans Mono:pixelsize=12\007
+URxvt.keysym.Control-plus:   command:\033]710;xft:Fantasque Sans Mono:pixelsize=14\007
+
 URxvt.background:            #161616
 URxvt.foreground:            #F2F2F2
 
