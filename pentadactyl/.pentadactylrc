@@ -35,6 +35,10 @@ hi                                           HintActive                         
 
 hi                                           Button                                   color:white;
 
+
+" umatrix fix
+style -name ublick * #nav-bar * {visibility:visible}
+
 command! reader -js <<EOF
 if ( buffer.URL.spec.startsWith('about:reader?') ) {
 	dactyl.execute('back')
