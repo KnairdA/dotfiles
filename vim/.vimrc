@@ -1,8 +1,8 @@
 " The following plugins are expected to be installed:
 " * pathogen          -- autoload other plugins
 " * ctrlp.vim         -- fuzzy file search
-" * gundo.vim         -- visualize undo tree
 " * nertree           -- nicer file browser with sidebar support
+" * vim-mundo         -- visualize undo tree
 " * vim-airline       -- better status bar
 " * vim-unimpaired    -- bracket mappings
 " * vim-gitgutter     -- display git diffs alongside line numbers
@@ -43,7 +43,13 @@ set incsearch
 set ignorecase
 set smartcase
 
+let mapleader=","
+
 map <leader>s :let @/=""<CR>
+map <leader>fc :foldclose<CR>
+map <leader>fo :foldopen<CR>
+
+nmap <backspace> :e#<CR>
 
 autocmd InsertEnter *      :setlocal nohlsearch
 autocmd InsertLeave *      :setlocal hlsearch
@@ -110,7 +116,7 @@ let g:goyo_margin_bottom        = 0
 let g:matlab_behave_paste_cmd   = "alt+v"
 
 nnoremap <F4>  :NERDTreeToggle<CR>
-nnoremap <F5>  :GundoToggle<CR>
+nnoremap <F5>  :MundoToggle<CR>
 nnoremap <F6>  :GitGutterToggle<CR>
 nnoremap <F7>  :set cursorline!<CR>
 nnoremap <F12> :Goyo<CR>
