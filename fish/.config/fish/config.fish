@@ -4,6 +4,7 @@ set EDITOR vim
 
 set fish_greeting ""
 
+alias ls='ls -h --color --group-directories-first'
 alias csi='csi -q'
 alias mp3-dl='youtube-dl --extract-audio --audio-format mp3'
 alias weather='curl wttr.in/Karlsruhe'
