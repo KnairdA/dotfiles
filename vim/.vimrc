@@ -7,7 +7,8 @@
 " * vim-unimpaired    -- bracket mappings
 " * vim-gitgutter     -- display git diffs alongside line numbers
 " * vim-renamer       -- file renaming utility
-" * vim-vimwiki       -- makes it easier to manage e.g. notes
+" * vim-pandoc        -- `pandoc` integration
+" * vim-pandoc-syntax -- `pandoc` syntax module
 " * goyo.vim          -- undistracted writing mode
 " * vim-matlab-behave -- add basic matlab support
 
@@ -54,14 +55,16 @@ nmap <backspace> :e#<CR>
 autocmd InsertEnter *      :setlocal nohlsearch
 autocmd InsertLeave *      :setlocal hlsearch
 
+
 " redraw wiki instance when managed via e.g. _i3wm scratch buffer_
 autocmd FocusGained *.wiki :redraw!
+autocmd BufRead,BufNewFile *.wiki set filetype=pandoc
 
 autocmd FileType scheme  setlocal shiftwidth=2 tabstop=2 expandtab
 autocmd FileType lisp    setlocal shiftwidth=2 tabstop=2 expandtab
 autocmd FileType racket  setlocal shiftwidth=2 tabstop=2 expandtab
-autocmd FileType vimwiki setlocal noswapfile nonumber foldcolumn=1 autoread
-autocmd FileType vimwiki let      g:airline#extensions#whitespace#checks=['indent', 'trailing', 'long']
+autocmd FileType pandoc  setlocal nonumber autoread
+autocmd FileType pandoc  let      g:airline#extensions#whitespace#checks=['indent', 'trailing', 'long']
 
 vnoremap cc "+y
 nnoremap cc "+p
@@ -102,13 +105,6 @@ let g:airline#extensions#tabline#show_splits          = 0
 let g:airline#extensions#tabline#show_tab_nr          = 0
 let g:airline#extensions#whitespace#mixed_indent_algo = 2
 
-let g:vimwiki_list = [{
-	\ 'path':             '~/note/',
-	\ 'path_html':        '~/share/note/',
-	\ 'template_path':    '~/share/note/assets/',
-	\ 'template_default': 'default',
-	\ 'template_ext':     '.tpl' }]
-
 let g:gitgutter_enabled         = 0
 let g:gitgutter_highlight_lines = 1
 let g:goyo_width                = 90
@@ -116,12 +112,11 @@ let g:goyo_margin_top           = 1
 let g:goyo_margin_bottom        = 0
 let g:matlab_behave_paste_cmd   = "alt+v"
 
+let g:pandoc#modules#disabled = ["folding","spell"]
+let g:pandoc#syntax#conceal#blacklist = ["image","atx"]
+
 nnoremap <F4>  :NERDTreeToggle<CR>
 nnoremap <F5>  :MundoToggle<CR>
 nnoremap <F6>  :GitGutterToggle<CR>
 nnoremap <F7>  :set cursorline!<CR>
 nnoremap <F12> :Goyo<CR>
-
-map  <leader>t :VimwikiToggleListItem<CR>
-nmap <leader>wtl <Plug>VimwikiTableMoveColumnLeft
-nmap <leader>wtr <Plug>VimwikiTableMoveColumnRight

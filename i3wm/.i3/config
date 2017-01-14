@@ -102,10 +102,10 @@ client.unfocused        #222222 #222222 #999999
 client.urgent           #a5a5a5 #a5a5a5 #2e3436
 client.background       #161616
 
-for_window [class="^.*"]                            border pixel 4
-for_window [title="^dictionary$"]                   floating enable
-for_window [title="^.*\.wiki \(~\/note.*\).*GVIM$"] border pixel 8; floating enable; move to scratchpad
-for_window [title="^.*- Zeal$"]                     border pixel 8; floating enable; move position 160px 46px; move to scratchpad
+for_window [class="^.*"]          border pixel 4
+for_window [title="^dictionary$"] floating enable
+for_window [title="VimWiki"]      border pixel 8; floating enable; move to scratchpad
+for_window [title="^.*- Zeal$"]   border pixel 8; floating enable; move position 160px 46px; move to scratchpad
 
 bindsym Control+Return exec urxvtc -title "Chicken Scheme REPL" -e csi -q
 bindsym $mod+Return    exec urxvtc
@@ -125,10 +125,10 @@ bindsym Control+Mod1+t exec --no-startup-id ~/.screenlayout/docked_tv_mode.sh
 
 bindsym $mod+c exec =
 bindsym $mod+t exec ~/.i3/apply_layout.sh
-bindsym $mod+n [title="^.*\.wiki \(~\/note.*\).*GVIM$"] scratchpad show
-bindsym $mod+z [title="^.*- Zeal$"]                     scratchpad show
+bindsym Control+n exec rofi_wiki
 
-bindsym $alt+n exec --no-startup-id sh -c "echo -e \$(xsel -o) '\n' >> ~/note/src/misc/inbox.wiki"
+bindsym $mod+z [title="^.*- Zeal$"] scratchpad show
+bindsym $mod+n [title="VimWiki"]    scratchpad show
 
 exec --no-startup-id export $(gnome-keyring-daemon)
 exec --no-startup-id urxvtd
@@ -136,7 +136,7 @@ exec --no-startup-id twmnd
 exec --no-startup-id nm-applet
 exec --no-startup-id volumeicon
 exec --no-startup-id feh --bg-center ~/.background.jpg
-exec --no-startup-id gvim ~/note/index.wiki
+exec --no-startup-id gvim -geometry 120x35 --servername VIMWIKI -c ":set title titlestring=VimWiki" ~/wiki/index.wiki
 exec --no-startup-id zeal
 exec --no-startup-id xautolock -time 5 -locker "i3lock -c 000000"
 exec --no-startup-id ~/.cabal/bin/arbtt-capture
