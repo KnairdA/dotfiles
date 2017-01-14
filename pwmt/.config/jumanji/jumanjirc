@@ -1,0 +1,21 @@
+set  font                     "Fantasque Sans Mono 12"
+
+set scroll-step               80
+set download-dir              ~/downloads/
+
+set  inputbar-bg              "#161616"
+set  inputbar-fg              "#909737"
+
+set  tabbar-bg                "#161616"
+set  tabbar-fg                "#909737"
+set  tabbar-focus-bg          "#909737"
+set  tabbar-focus-fg          "#161616"
+
+set  statusbar-bg             "#161616"
+set  statusbar-fg             "#909737"
+
+set  completion-bg            "#161616"
+set  completion-fg            "#909737"
+
+set  completion-highlight-bg  "#909737"
+set  completion-highlight-fg  "#161616"
