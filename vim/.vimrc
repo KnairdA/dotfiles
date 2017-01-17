@@ -114,6 +114,7 @@ let g:matlab_behave_paste_cmd   = "alt+v"
 
 let g:pandoc#modules#disabled = ["folding","spell"]
 let g:pandoc#syntax#conceal#blacklist = ["image","atx"]
+let g:pandoc#syntax#codeblocks#embeds#langs = ["c","cpp","sh","xslt","xml","python","php","diff","gdb","lisp","scheme"]
 
 nnoremap <F4>  :NERDTreeToggle<CR>
 nnoremap <F5>  :MundoToggle<CR>
