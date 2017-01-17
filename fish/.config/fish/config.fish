@@ -23,7 +23,7 @@ set fish_color_quote          brown
 set fish_color_autosuggestion 555
 
 if [ (hostname) = "obelix" ]
-	set PATH $PATH /usr/local/bin/ /usr/local/texlive/2014/bin/x86_64-linux ~/.cabal/bin/
+	set PATH $PATH /usr/local/bin/ /usr/local/texlive/2014/bin/x86_64-linux ~/.cabal/bin/ ~/.gem/ruby/2.4.0/bin/
 
 	alias i='sxiv'
 	alias orb='open ~/webarchive/data/(ls ~/webarchive/data/ | sort -R | head -n 1)/index.html'
