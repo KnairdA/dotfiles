@@ -125,7 +125,7 @@ bindsym Control+Mod1+t exec --no-startup-id ~/.screenlayout/docked_tv_mode.sh
 
 bindsym $mod+c exec =
 bindsym $mod+t exec ~/.i3/apply_layout.sh
-bindsym Control+n exec rofi_wiki
+bindsym Mod1+n exec rofi_wiki
 
 bindsym $mod+z [title="^.*- Zeal$"] scratchpad show
 bindsym $mod+n [title="VimWiki"]    scratchpad show
@@ -136,7 +136,7 @@ exec --no-startup-id twmnd
 exec --no-startup-id nm-applet
 exec --no-startup-id volumeicon
 exec --no-startup-id feh --bg-center ~/.background.jpg
-exec --no-startup-id gvim -geometry 120x35 --servername VIMWIKI -c ":set title titlestring=VimWiki" ~/wiki/index.wiki
+exec --no-startup-id gvim -geometry 120x35 --servername VIMWIKI -c ":set title titlestring=VimWiki" -c ":set autowriteall" ~/wiki/0.wiki
 exec --no-startup-id zeal
 exec --no-startup-id xautolock -time 5 -locker "i3lock -c 000000"
 exec --no-startup-id ~/.cabal/bin/arbtt-capture
