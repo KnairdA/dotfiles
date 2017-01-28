@@ -24,6 +24,8 @@ bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
 bindsym $mod+e layout default
 
+bindsym Control+s sticky toggle; exec --no-startup-id notify-send "sticky mode toggle."
+
 bindsym $mod+a focus parent
 bindsym $mod+d focus child
 
@@ -102,10 +104,11 @@ client.unfocused        #222222 #222222 #999999
 client.urgent           #a5a5a5 #a5a5a5 #2e3436
 client.background       #161616
 
-for_window [class="^.*"]          border pixel 4
-for_window [title="^dictionary$"] floating enable
-for_window [title="VimWiki"]      border pixel 8; floating enable; move to scratchpad
-for_window [title="^.*- Zeal$"]   border pixel 8; floating enable; move position 160px 46px; move to scratchpad
+for_window [class="^.*"]             border pixel 4;
+for_window [title="^dictionary$"]    border pixel 8, floating enable;
+for_window [title="VimWiki"]         border pixel 8, floating enable, move to scratchpad;
+for_window [title="^.*- Zeal$"]      border pixel 8, floating enable, move position 160px 46px, move to scratchpad;
+for_window [instance="DropDownTerm"] border pixel 8, move to scratchpad, move position 183px -8px, resize set 1000px 600px, move to scratchpad;
 
 bindsym Control+Return exec urxvtc -title "Chicken Scheme REPL" -e csi -q
 bindsym $mod+Return    exec urxvtc
@@ -127,8 +130,9 @@ bindsym $mod+c exec =
 bindsym $mod+t exec ~/.i3/apply_layout.sh
 bindsym Mod1+n exec rofi_wiki
 
-bindsym $mod+z [title="^.*- Zeal$"] scratchpad show
-bindsym $mod+n [title="VimWiki"]    scratchpad show
+bindsym $mod+z [title="^.*- Zeal$"]      scratchpad show
+bindsym $mod+n [title="VimWiki"]         scratchpad show
+bindsym Menu   [instance="DropDownTerm"] scratchpad show
 
 exec --no-startup-id export $(gnome-keyring-daemon)
 exec --no-startup-id urxvtd
@@ -136,7 +140,8 @@ exec --no-startup-id twmnd
 exec --no-startup-id nm-applet
 exec --no-startup-id volumeicon
 exec --no-startup-id feh --bg-center ~/.background.jpg
-exec --no-startup-id gvim -geometry 120x35 --servername VIMWIKI -c ":set title titlestring=VimWiki" -c ":set autowriteall" ~/wiki/0.wiki
+exec --no-startup-id gvim -geometry 120x35 --servername VIMWIKI -c ":set title titlestring=VimWiki" -c ":set autowriteall" -c ":set noswapfile"  ~/wiki/0.wiki
 exec --no-startup-id zeal
+exec --no-startup-id urxvtc -name DropDownTerm
 exec --no-startup-id xautolock -time 5 -locker "i3lock -c 000000"
 exec --no-startup-id ~/.cabal/bin/arbtt-capture
