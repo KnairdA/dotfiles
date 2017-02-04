@@ -24,7 +24,7 @@ bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
 bindsym $mod+e layout default
 
-bindsym Control+s sticky toggle; exec --no-startup-id notify-send "sticky mode toggle."
+bindsym Mod1+s sticky toggle, exec --no-startup-id notify-send "sticky mode toggle.";
 
 bindsym $mod+a focus parent
 bindsym $mod+d focus child
@@ -142,6 +142,6 @@ exec --no-startup-id volumeicon
 exec --no-startup-id feh --bg-center ~/.background.jpg
 exec --no-startup-id gvim -geometry 120x35 --servername VIMWIKI -c ":set title titlestring=VimWiki" -c ":set autowriteall" -c ":set noswapfile"  ~/wiki/0.wiki
 exec --no-startup-id zeal
-exec --no-startup-id urxvtc -name DropDownTerm
+exec --no-startup-id urxvt -name DropDownTerm
 exec --no-startup-id xautolock -time 5 -locker "i3lock -c 000000"
 exec --no-startup-id ~/.cabal/bin/arbtt-capture

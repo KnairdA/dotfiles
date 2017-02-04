@@ -1,0 +1,3 @@
+#!/usr/bin/fish
+
+firefox ~/webarchive/data/(ls --color=never ~/webarchive/data/ | sort -R | head -n 1)/index.html ^/dev/null > /dev/null
