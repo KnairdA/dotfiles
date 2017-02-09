@@ -1,4 +1,4 @@
-set guifont=Fantasque\ Sans\ Mono\ 9.5
+set guifont=Iosevka 14px
 set guioptions=agim
 set guioptions-=m
 

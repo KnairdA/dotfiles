@@ -1,4 +1,4 @@
-set  font                     "Fantasque Sans Mono 12"
+set  font                     "Iosevka 14px"
 
 set  inputbar-bg              "#161616"
 set  inputbar-fg              "#909737"

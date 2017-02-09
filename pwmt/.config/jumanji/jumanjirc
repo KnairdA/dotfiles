@@ -1,4 +1,4 @@
-set  font                     "Fantasque Sans Mono 12"
+set  font                     "Iosevka 14px"
 
 set scroll-step               80
 set download-dir              ~/downloads/
