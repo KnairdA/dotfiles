@@ -11,6 +11,7 @@
 " * vim-pandoc-syntax -- `pandoc` syntax module
 " * goyo.vim          -- undistracted writing mode
 " * vim-matlab-behave -- add basic matlab support
+" * vim-latex-suite   -- latex integration, main usecase is concealment of math expressions
 
 call pathogen#infect()
 
@@ -46,11 +47,14 @@ set smartcase
 
 let mapleader=","
 
-map <leader>s :let @/=""<CR>
+map <leader>s  :let @/=""<CR>
 map <leader>fc :foldclose<CR>
 map <leader>fo :foldopen<CR>
+map <leader>t  :Tab/\|<CR>
 
 nmap <backspace> :e#<CR>
+nmap f           za
+nmap F           zA
 
 autocmd InsertEnter *      :setlocal nohlsearch
 autocmd InsertLeave *      :setlocal hlsearch
@@ -65,6 +69,7 @@ autocmd FileType lisp    setlocal shiftwidth=2 tabstop=2 expandtab
 autocmd FileType racket  setlocal shiftwidth=2 tabstop=2 expandtab
 autocmd FileType pandoc  setlocal nonumber autoread
 autocmd FileType pandoc  let      g:airline#extensions#whitespace#checks=['indent', 'trailing', 'long']
+autocmd FileType tex     set      conceallevel=2
 
 vnoremap cc "+y
 nnoremap cc "+p
@@ -112,7 +117,7 @@ let g:goyo_margin_top           = 1
 let g:goyo_margin_bottom        = 0
 let g:matlab_behave_paste_cmd   = "alt+v"
 
-let g:pandoc#modules#disabled = ["folding","spell"]
+let g:pandoc#modules#disabled = ["folding","spell","chdir"]
 let g:pandoc#syntax#conceal#blacklist = ["image","atx"]
 let g:pandoc#syntax#codeblocks#embeds#langs = ["c","cpp","sh","xslt","xml","python","php","diff","gdb","lisp","scheme"]
 
@@ -121,3 +126,7 @@ nnoremap <F5>  :MundoToggle<CR>
 nnoremap <F6>  :GitGutterToggle<CR>
 nnoremap <F7>  :set cursorline!<CR>
 nnoremap <F12> :Goyo<CR>
+
+" latex suite
+set grepprg=grep\ -nH\ $*
+let g:tex_flavor = "latex"
