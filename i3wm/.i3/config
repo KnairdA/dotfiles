@@ -1,6 +1,33 @@
 set $mod Mod4
 set $alt Mod1
 
+font pango:Iosevka Medium 14px
+hide_edge_borders both
+
+client.focused          #909737 #909737 #222222
+client.focused_inactive #222222 #222222 #999999
+client.unfocused        #222222 #222222 #999999
+client.urgent           #a5a5a5 #a5a5a5 #2e3436
+client.background       #161616
+
+bar {
+	status_command ~/.conky.sh
+	workspace_buttons yes
+	tray_output LVDS1
+
+	font pango:Iosevka Medium 14px
+
+	colors {
+		background #161616
+		statusline #605c5a
+
+		focused_workspace  #909737  #909737  #161616
+		urgent_workspace   #909737  #909737  #161616
+		active_workspace   #909737  #909737  #161616
+		inactive_workspace #161616  #161616  #909737
+	}
+}
+
 bindsym $mod+Shift+Q kill
 bindsym $mod+Shift+C reload
 bindsym $mod+Shift+R restart
@@ -60,56 +87,6 @@ bindsym $mod+Shift+parenleft  move container to workspace 8
 bindsym $mod+Shift+parenright move container to workspace 9
 bindsym $mod+Shift+equal      move container to workspace 0
 
-bindsym $mod+r mode "resize"
-
-mode "resize" {
-	bindsym h resize shrink width   5 px or  5 ppt
-	bindsym j resize grow   height 10 px or 10 ppt
-	bindsym k resize shrink height 10 px or 10 ppt
-	bindsym l resize grow   width   5 px or  5 ppt
-
-	bindsym 113 resize shrink width  10 px or 10 ppt
-	bindsym 116 resize grow   height 10 px or 10 ppt
-	bindsym 111 resize shrink height 10 px or 10 ppt
-	bindsym 114 resize grow   width  10 px or 10 ppt
-
-	bindsym Return mode "default"
-	bindsym Escape mode "default"
-}
-
-bar {
-	status_command ~/.conky.sh
-	workspace_buttons yes
-	tray_output LVDS1
-
-	font pango:Iosevka Medium 14px
-
-	colors {
-		background #161616
-		statusline #605c5a
-
-		focused_workspace  #909737  #909737  #161616
-		urgent_workspace   #909737  #909737  #161616
-		active_workspace   #909737  #909737  #161616
-		inactive_workspace #161616  #161616  #909737
-	}
-}
-
-font pango:Iosevka Medium 14px
-hide_edge_borders both
-
-client.focused          #909737 #909737 #222222
-client.focused_inactive #222222 #222222 #999999
-client.unfocused        #222222 #222222 #999999
-client.urgent           #a5a5a5 #a5a5a5 #2e3436
-client.background       #161616
-
-for_window [class="^.*"]             border pixel 4;
-for_window [title="^dictionary$"]    border pixel 8, floating enable;
-for_window [title="VimWiki"]         border pixel 8, floating enable, move to scratchpad;
-for_window [title="^.*- Zeal$"]      border pixel 8, floating enable, move position 160px 46px, move to scratchpad;
-for_window [instance="DropDownTerm"] border pixel 8, move to scratchpad, move position 183px -8px, resize set 1000px 600px, move to scratchpad;
-
 bindsym Control+Return exec urxvtc -title "Chicken Scheme REPL" -e csi -q
 bindsym $mod+Return    exec urxvtc
 bindsym $alt+Return    exec gvim
@@ -133,6 +110,42 @@ bindsym Mod1+n exec rofi_wiki
 bindsym $mod+z [title="^.*- Zeal$"]      scratchpad show
 bindsym $mod+n [title="VimWiki"]         scratchpad show
 bindsym Menu   [instance="DropDownTerm"] scratchpad show
+
+bindsym $mod+r mode "resize"
+
+mode "resize" {
+	bindsym h resize shrink width   5 px or  5 ppt
+	bindsym j resize grow   height 10 px or 10 ppt
+	bindsym k resize shrink height 10 px or 10 ppt
+	bindsym l resize grow   width   5 px or  5 ppt
+
+	bindsym 113 resize shrink width  10 px or 10 ppt
+	bindsym 116 resize grow   height 10 px or 10 ppt
+	bindsym 111 resize shrink height 10 px or 10 ppt
+	bindsym 114 resize grow   width  10 px or 10 ppt
+
+	bindsym Return mode "default"
+	bindsym Escape mode "default"
+}
+
+bindsym $mod+g mode "gaps"
+
+mode "gaps" {
+	bindsym plus  gaps inner current plus 5
+	bindsym minus gaps inner current minus 5
+
+	bindsym Shift+plus  gaps inner all plus 5
+	bindsym Shift+minus gaps inner all minus 5
+
+	bindsym Return mode "default"
+	bindsym Escape mode "default"
+}
+
+for_window [class="^.*"]             border pixel 4;
+for_window [title="^dictionary$"]    border pixel 8, floating enable;
+for_window [title="VimWiki"]         border pixel 8, floating enable, move to scratchpad;
+for_window [title="^.*- Zeal$"]      border pixel 8, floating enable, move position 160px 46px, move to scratchpad;
+for_window [instance="DropDownTerm"] border pixel 8, move to scratchpad, move position 183px -8px, resize set 1000px 600px, move to scratchpad;
 
 exec --no-startup-id export $(gnome-keyring-daemon)
 exec --no-startup-id urxvtd
