@@ -12,6 +12,7 @@
 " * goyo.vim          -- undistracted writing mode
 " * vim-matlab-behave -- add basic matlab support
 " * vim-latex-suite   -- latex integration, main usecase is concealment of math expressions
+" * vim-autoformat    -- autoformatting integration
 
 call pathogen#infect()
 
@@ -51,6 +52,7 @@ map <leader>s  :let @/=""<CR>
 map <leader>fc :foldclose<CR>
 map <leader>fo :foldopen<CR>
 map <leader>t  :Tab/\|<CR>
+map <leader>c  zz
 
 nmap <backspace> :e#<CR>
 nmap f           za
@@ -76,7 +78,7 @@ nnoremap cc "+p
 
 nnoremap <C-left> gT
 nnoremap <C-right> gt
-nnoremap <space> zz
+nnoremap <space> @q
 nnoremap J }
 nnoremap K {
 
@@ -119,7 +121,7 @@ let g:matlab_behave_paste_cmd   = "alt+v"
 
 let g:pandoc#modules#disabled = ["folding","spell","chdir"]
 let g:pandoc#syntax#conceal#blacklist = ["image","atx"]
-let g:pandoc#syntax#codeblocks#embeds#langs = ["c","cpp","sh","xslt","xml","python","php","diff","gdb","lisp","scheme"]
+let g:pandoc#syntax#codeblocks#embeds#langs = ["c","cpp","sh","xslt","xml","python","php","diff","gdb","lisp","scheme","asm"]
 
 nnoremap <F4>  :NERDTreeToggle<CR>
 nnoremap <F5>  :MundoToggle<CR>
@@ -130,3 +132,8 @@ nnoremap <F12> :Goyo<CR>
 " latex suite
 set grepprg=grep\ -nH\ $*
 let g:tex_flavor = "latex"
+
+" project specific formatters
+let g:formatdef_openlb_c = '"astyle -s2 -A4 --mode=c -n -c -j -H --options=none"'
+let g:formatters_c       = ['openlb_c']
+let g:formatters_cpp     = ['openlb_c']
