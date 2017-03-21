@@ -132,6 +132,8 @@ nnoremap <F12> :Goyo<CR>
 " latex suite
 set grepprg=grep\ -nH\ $*
 let g:tex_flavor = "latex"
+let g:Imap_UsePlaceHolders = 0
+let g:Tex_PromptedEnvironments = ''
 
 " project specific formatters
 let g:formatdef_openlb_c = '"astyle -s2 -A4 --mode=c -n -c -j -H --options=none"'
