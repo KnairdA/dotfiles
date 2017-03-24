@@ -1,4 +1,4 @@
-image/                         = sxiv
+image/                         = sxiv-rifle
 video/                         = mpv
 audio/                         = mplayer::urxvtc
 text/html                      = firefox

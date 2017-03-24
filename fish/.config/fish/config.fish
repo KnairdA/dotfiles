@@ -22,8 +22,8 @@ set fish_color_cwd            green
 set fish_color_quote          brown
 set fish_color_autosuggestion 555
 
-if [ (hostname) = "obelix" ]
-	set PATH $PATH /usr/local/bin/ /usr/local/texlive/2014/bin/x86_64-linux ~/.cabal/bin/ ~/.local/bin/ ~/.gem/ruby/2.4.0/bin/
+set PATH $PATH /usr/local/bin/
 
-	alias i='sxiv'
+if [ (hostname) = "obelix" ]
+	set PATH $PATH /usr/local/texlive/2014/bin/x86_64-linux ~/.cabal/bin/ ~/.local/bin/ ~/.gem/ruby/2.4.0/bin/
 end
