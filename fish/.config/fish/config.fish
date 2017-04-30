@@ -1,6 +1,7 @@
 umask 0077
 
-set EDITOR vim
+export EDITOR=vim
+export VISUAL=vim
 
 set fish_greeting ""
 

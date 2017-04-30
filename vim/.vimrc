@@ -119,15 +119,30 @@ let g:goyo_margin_top           = 1
 let g:goyo_margin_bottom        = 0
 let g:matlab_behave_paste_cmd   = "alt+v"
 
-let g:pandoc#modules#disabled = ["folding","spell","chdir"]
-let g:pandoc#syntax#conceal#blacklist = ["image","atx"]
-let g:pandoc#syntax#codeblocks#embeds#langs = ["c","cpp","sh","xslt","xml","python","php","diff","gdb","lisp","scheme","asm"]
-
 nnoremap <F4>  :NERDTreeToggle<CR>
 nnoremap <F5>  :MundoToggle<CR>
 nnoremap <F6>  :GitGutterToggle<CR>
 nnoremap <F7>  :set cursorline!<CR>
+nnoremap <F8>  :TagbarToggle<CR> zz
 nnoremap <F12> :Goyo<CR>
+
+" ctrlp file opener
+nnoremap <c-t> :CtrlPBufTag<CR>
+nnoremap <a-t> :CtrlPTag<CR>
+
+let g:ctrlp_custom_ignore = {
+\ 'dir':  '\.git$',
+\ 'file': '\.o$\|\.d$'
+\ }
+
+" tagbar
+let g:tagbar_autofocus = 1
+let g:tagbar_compact   = 1
+
+" pandoc
+let g:pandoc#modules#disabled = ["folding","spell","chdir"]
+let g:pandoc#syntax#conceal#blacklist = ["image","atx"]
+let g:pandoc#syntax#codeblocks#embeds#langs = ["c","cpp","sh","xslt","xml","python","php","diff","gdb","lisp","scheme","asm"]
 
 " latex suite
 set grepprg=grep\ -nH\ $*
