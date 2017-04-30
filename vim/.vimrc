@@ -53,6 +53,7 @@ map <leader>fc :foldclose<CR>
 map <leader>fo :foldopen<CR>
 map <leader>t  :Tab/\|<CR>
 map <leader>c  zz
+map <leader>d  <c-]>
 
 nmap <backspace> :e#<CR>
 nmap f           za
@@ -123,7 +124,7 @@ nnoremap <F4>  :NERDTreeToggle<CR>
 nnoremap <F5>  :MundoToggle<CR>
 nnoremap <F6>  :GitGutterToggle<CR>
 nnoremap <F7>  :set cursorline!<CR>
-nnoremap <F8>  :TagbarToggle<CR> zz
+nnoremap <F8>  :TagbarToggle<CR>
 nnoremap <F12> :Goyo<CR>
 
 " ctrlp file opener
@@ -136,8 +137,10 @@ let g:ctrlp_custom_ignore = {
 \ }
 
 " tagbar
-let g:tagbar_autofocus = 1
-let g:tagbar_compact   = 1
+let g:tagbar_autoclose      = 1
+let g:tagbar_autopreview    = 1
+let g:tagbar_compact        = 1
+let g:tagbar_width          = 70
 
 " pandoc
 let g:pandoc#modules#disabled = ["folding","spell","chdir"]
