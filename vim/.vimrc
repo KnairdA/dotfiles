@@ -1,23 +1,26 @@
-" The following plugins are expected to be installed:
-" * pathogen          -- autoload other plugins
-" * ctrlp.vim         -- fuzzy file search
-" * nertree           -- nicer file browser with sidebar support
-" * vim-mundo         -- visualize undo tree
-" * vim-airline       -- better status bar
-" * vim-unimpaired    -- bracket mappings
-" * vim-gitgutter     -- display git diffs alongside line numbers
-" * vim-renamer       -- file renaming utility
-" * vim-pandoc        -- `pandoc` integration
-" * vim-pandoc-syntax -- `pandoc` syntax module
-" * goyo.vim          -- undistracted writing mode
-" * vim-matlab-behave -- add basic matlab support
-" * vim-latex-suite   -- latex integration, main usecase is concealment of math expressions
-" * vim-autoformat    -- autoformatting integration
+call plug#begin('~/.vim/plugins')
 
-call pathogen#infect()
+Plug 'ctrlpvim/ctrlp.vim'             " fuzzy file, ctag search
+Plug 'scrooloose/nerdtree'            " nicer file browser with sidebar support
+Plug 'simnalamburt/vim-mundo'         " visualize undo tree
+Plug 'vim-airline/vim-airline'        " better status bar
+Plug 'vim-airline/vim-airline-themes' " airline themes
+Plug 'tpope/vim-unimpaired'           " bracket mappings
+Plug 'airblade/vim-gitgutter'         " display git diffs alongside line numbers
+Plug 'qpkorr/vim-renamer'             " file renaming utility
+Plug 'vim-pandoc/vim-pandoc'          " `pandoc` integration
+Plug 'vim-pandoc/vim-pandoc-syntax'   " `pandoc` syntax module
+Plug 'junegunn/goyo.vim'              " distraction free writing mode
+Plug 'elmanuelito/vim-matlab-behave'  " add basic matlab support
+Plug 'vim-latex/vim-latex'            " latex integration, main usecase for me is the concealment of math expressions
+Plug 'Chiel92/vim-autoformat'         " autoformatting integration
+Plug 'majutsushi/tagbar'              " display ctag tree in sidebar
+
+call plug#end()
 
 syntax enable
 filetype plugin indent on
+
 set encoding=utf-8
 set showcmd
 set nocompatible
@@ -61,7 +64,6 @@ nmap F           zA
 
 autocmd InsertEnter *      :setlocal nohlsearch
 autocmd InsertLeave *      :setlocal hlsearch
-
 
 " redraw wiki instance when managed via e.g. _i3wm scratch buffer_
 autocmd FocusGained *.wiki :redraw!
