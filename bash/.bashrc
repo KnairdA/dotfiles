@@ -4,9 +4,7 @@
 host=`hostname`
 
 if [ $host = "automatix" ] || [ $host = "asterix" ]; then
-	if [ -z "$STY" ]; then
-		exec screen -R
-	fi
+	[ -z "$TMUX" ] && { tmux attach || exec tmux new && exit; }
 fi
 
 if [[ -z $DISPLAY && $XDG_VTNR -eq 1 ]]; then
