@@ -17,6 +17,7 @@ Plug 'Chiel92/vim-autoformat'          " autoformatting integration
 Plug 'majutsushi/tagbar'               " display ctag tree in sidebar
 Plug 'godlygeek/tabular'               " text alignment helper
 Plug 'MarcWeber/vim-addon-local-vimrc' " folder specific vim configuration
+Plug 'nathanaelkane/vim-indent-guides' " pretty indentations
 
 call plug#end()
 
@@ -132,6 +133,10 @@ nnoremap <F6>  :GitGutterToggle<CR>
 nnoremap <F7>  :set cursorline!<CR>
 nnoremap <F8>  :TagbarToggle<CR>
 nnoremap <F12> :Goyo<CR>
+
+" indent guides
+let g:indent_guides_auto_colors  = 1
+let g:indent_guides_space_guides = 0
 
 " ctrlp file opener
 nnoremap <c-t> :CtrlPBufTag<CR>
