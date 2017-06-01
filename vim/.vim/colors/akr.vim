@@ -97,4 +97,7 @@ hi      Conceal         gui=NONE       guifg=NONE     guibg=#000000
 
 hi      prologClauseHead gui=NONE      guifg=#aadb0f  guibg=NONE
 
+hi      IndentGuidesEven gui=NONE      guifg=#424242  guibg=#2D2D2D
+hi      IndentGuidesOdd  gui=NONE      guifg=#424242  guibg=#2D2D2D
+
 match   SpecialKey     '^\s\+'

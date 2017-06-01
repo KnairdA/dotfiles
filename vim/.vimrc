@@ -135,7 +135,6 @@ nnoremap <F8>  :TagbarToggle<CR>
 nnoremap <F12> :Goyo<CR>
 
 " indent guides
-let g:indent_guides_auto_colors  = 1
 let g:indent_guides_space_guides = 0
 
 " ctrlp file opener
