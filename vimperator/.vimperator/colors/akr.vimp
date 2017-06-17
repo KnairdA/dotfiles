@@ -1,0 +1,14 @@
+hi StatusLine  color: #909737; background: #161616; font-size: 14px; font-family: Iosevka;
+
+hi Normal      color: #909737; background: #161616; font-size: 14px; font-family: Iosevka;
+hi CmdLine     color: #909737; background: #161616; font-size: 14px; font-family: Iosevka;
+
+hi Normal      color: #909737; background: #161616; font-size: 14px; font-family: Iosevka; border-top: 1px solid #909737;
+hi StatusLine  color: #909737; background: #161616; font-size: 14px; font-family: Iosevka;
+hi CompTitle   color: #909737; background: #161616; font-size: 14px; font-family: Iosevka;
+
+hi CompItem           color: #909737; background: #161616; font-size: 14px; font-family: Iosevka;
+hi CompItem[selected] color: #161616; background: #909737; font-size: 14px; font-family: Iosevka;
+
+hi  CompItem:nth-child(2n+1)           background: #121212;                 font-size: 14px; font-family: Iosevka;
+hi  CompItem:nth-child(2n+1)[selected] background: #909737; color: #161616; font-size: 14px; font-family: Iosevka;

@@ -20,6 +20,8 @@ whitelist ~/.cache/mozilla/firefox
 whitelist ~/dwhelper
 whitelist ~/.pentadactylrc
 whitelist ~/.pentadactyl
+whitelist ~/.vimperator
+whitelist ~/.vimperatorrc
 whitelist ~/.pki
 
 # allowed _payload_ home directories

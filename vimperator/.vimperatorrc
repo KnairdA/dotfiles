@@ -1,0 +1,12 @@
+set gui=nonavigation,nobookmarks,nomenu,addons,tabs
+
+colorscheme akr
+
+nnoremap j 5j
+nnoremap k 5k
+
+map <F9>  :emenu View.Tabbar<CR>
+map <F10> :sidebar Scrapbook X<CR>
+
+nmap a :emenu ScrapBook X.Save Page<CR>
+nmap b :emenu ScrapBook X.Save As Bookmark...<CR>
