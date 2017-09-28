@@ -6,5 +6,6 @@ text/                          = gvim
 application/pdf                = zathura
 application/x-mobipocket-ebook = ebook-viewer
 application/epub*              = ebook-viewer
+application/vnd.ms-excel       = libreoffice
 inode/directory                = ranger?:urxvtc
 @^(https?://|www\.)            = firefox

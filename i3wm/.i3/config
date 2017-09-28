@@ -146,6 +146,7 @@ for_window [title="^dictionary$"]    border pixel 8, floating enable;
 for_window [title="VimWiki"]         border pixel 8, floating enable, move to scratchpad;
 for_window [title="^.*- Zeal$"]      border pixel 8, floating enable, move position 160px 46px, move to scratchpad;
 for_window [instance="DropDownTerm"] border pixel 8, move to scratchpad, move position 183px -8px, resize set 1000px 600px, move to scratchpad;
+for_window [title="pinentry"]        border pixel 8, floating enable;
 
 exec --no-startup-id export $(gnome-keyring-daemon)
 exec --no-startup-id urxvtd

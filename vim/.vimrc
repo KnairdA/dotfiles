@@ -139,8 +139,9 @@ nnoremap <F12> :Goyo<CR>
 let g:indent_guides_space_guides = 0
 
 " ctrlp file opener
-nnoremap <c-t> :CtrlPBufTag<CR>
-nnoremap <a-t> :CtrlPTag<CR>
+nnoremap <c-b> :CtrlPBuffer<CR>
+nnoremap <c-t> :CtrlPTag<CR>
+nnoremap <a-t> :CtrlPBufTag<CR>
 
 let g:ctrlp_custom_ignore = {
 \ 'dir':  '\.git$',
