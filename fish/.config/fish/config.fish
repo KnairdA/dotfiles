@@ -7,7 +7,7 @@ set fish_greeting ""
 
 alias ls='ls -h --color --group-directories-first'
 alias csi='csi -q'
-alias mp3-dl='youtube-dl --extract-audio --audio-format mp3'
+alias mp3-dl='youtube-dl --extract-audio --audio-format mp3 -o "%(title)s.%(ext)s"'
 alias weather='curl wttr.in/Karlsruhe'
 
 eval (dircolors -c ~/.dir_colors)

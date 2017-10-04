@@ -141,6 +141,10 @@ mode "gaps" {
 	bindsym Escape mode "default"
 }
 
+bindsym XF86AudioMute        exec --no-startup-id pactl set-sink-mute 0 1
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-mute 0 0 && pactl set-sink-volume 0 +10%
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-mute 0 0 && pactl set-sink-volume 0 -10%
+
 for_window [class="^.*"]             border pixel 4;
 for_window [title="^dictionary$"]    border pixel 8, floating enable;
 for_window [title="VimWiki"]         border pixel 8, floating enable, move to scratchpad;
@@ -152,7 +156,7 @@ exec --no-startup-id export $(gnome-keyring-daemon)
 exec --no-startup-id urxvtd
 exec --no-startup-id twmnd
 exec --no-startup-id nm-applet
-exec --no-startup-id volumeicon
+exec --no-startup-id pasystray
 exec --no-startup-id feh --bg-center ~/.background.jpg
 exec --no-startup-id gvim -geometry 120x35 --servername VIMWIKI -c ":set title titlestring=VimWiki" -c ":set autowriteall" -c ":set noswapfile"  ~/wiki/0.wiki
 exec --no-startup-id zeal
