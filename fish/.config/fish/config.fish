@@ -9,6 +9,7 @@ alias ls='ls -h --color --group-directories-first'
 alias csi='csi -q'
 alias mp3-dl='youtube-dl --extract-audio --audio-format mp3 -o "%(title)s.%(ext)s"'
 alias weather='curl wttr.in/Karlsruhe'
+alias ff='vim (fzf --height 50%)'
 
 eval (dircolors -c ~/.dir_colors)
 eval (python -m virtualfish)

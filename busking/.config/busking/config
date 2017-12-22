@@ -8,4 +8,5 @@ application/x-mobipocket-ebook = ebook-viewer
 application/epub*              = ebook-viewer
 application/vnd.ms-excel       = libreoffice
 inode/directory                = ranger?:urxvtc
+model/x.stl-binary             = fstl
 @^(https?://|www\.)            = firefox

@@ -1,24 +1,27 @@
 call plug#begin('~/.vim/plugins')
 
-Plug 'ctrlpvim/ctrlp.vim'               " fuzzy file, ctag search
-Plug 'scrooloose/nerdtree'              " nicer file browser with sidebar support
-Plug 'simnalamburt/vim-mundo'           " visualize undo tree
-Plug 'vim-airline/vim-airline'          " better status bar
-Plug 'vim-airline/vim-airline-themes'   " airline themes
-Plug 'tpope/vim-unimpaired'             " bracket mappings
-Plug 'airblade/vim-gitgutter'           " display git diffs alongside line numbers
-Plug 'qpkorr/vim-renamer'               " file renaming utility
-Plug 'vim-pandoc/vim-pandoc'            " `pandoc` integration
-Plug 'vim-pandoc/vim-pandoc-syntax'     " `pandoc` syntax module
-Plug 'junegunn/goyo.vim'                " distraction free writing mode
-Plug 'elmanuelito/vim-matlab-behave'    " add basic matlab support
-Plug 'vim-latex/vim-latex'              " latex integration, main usecase for me is the concealment of math expressions
-Plug 'Chiel92/vim-autoformat'           " autoformatting integration
-Plug 'majutsushi/tagbar'                " display ctag tree in sidebar
-Plug 'godlygeek/tabular'                " text alignment helper
-Plug 'MarcWeber/vim-addon-local-vimrc'  " folder specific vim configuration
-Plug 'nathanaelkane/vim-indent-guides'  " pretty indentations
-Plug 'octol/vim-cpp-enhanced-highlight' " better C++ highlighting
+Plug 'ctrlpvim/ctrlp.vim'                  " fuzzy file, ctag search
+Plug 'scrooloose/nerdtree'                 " nicer file browser with sidebar support
+Plug 'simnalamburt/vim-mundo'              " visualize undo tree
+Plug 'vim-airline/vim-airline'             " better status bar
+Plug 'vim-airline/vim-airline-themes'      " airline themes
+Plug 'tpope/vim-unimpaired'                " bracket mappings
+Plug 'airblade/vim-gitgutter'              " display git diffs alongside line numbers
+Plug 'qpkorr/vim-renamer'                  " file renaming utility
+Plug 'vim-pandoc/vim-pandoc'               " `pandoc` integration
+Plug 'vim-pandoc/vim-pandoc-syntax'        " `pandoc` syntax module
+Plug 'junegunn/goyo.vim'                   " distraction free writing mode
+Plug 'elmanuelito/vim-matlab-behave'       " add basic matlab support
+Plug 'vim-latex/vim-latex'                 " latex integration, main usecase for me is the concealment of math expressions
+Plug 'Chiel92/vim-autoformat'              " autoformatting integration
+Plug 'majutsushi/tagbar'                   " display ctag tree in sidebar
+Plug 'godlygeek/tabular'                   " text alignment helper
+Plug 'MarcWeber/vim-addon-local-vimrc'     " folder specific vim configuration
+Plug 'nathanaelkane/vim-indent-guides'     " pretty indentations
+Plug 'octol/vim-cpp-enhanced-highlight'    " better C++ highlighting
+Plug 'easymotion/vim-easymotion'           " visual motion help
+Plug 'haya14busa/incsearch.vim'            " visual incremental search
+Plug 'haya14busa/incsearch-easymotion.vim' " intergration of incsearch and easymotion
 
 call plug#end()
 
@@ -57,11 +60,10 @@ set smartcase
 let mapleader=","
 
 map <leader>s  :let @/=""<CR>
-map <leader>fc :foldclose<CR>
-map <leader>fo :foldopen<CR>
 map <leader>t  :Tab/\|<CR>
 map <leader>c  zz
 map <leader>d  <c-]>
+map <leader>f <Plug>(incsearch-easymotion-/)
 
 nmap <backspace> :e#<CR>
 nmap f           za
