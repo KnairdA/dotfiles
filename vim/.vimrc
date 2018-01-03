@@ -22,6 +22,7 @@ Plug 'octol/vim-cpp-enhanced-highlight'    " better C++ highlighting
 Plug 'easymotion/vim-easymotion'           " visual motion help
 Plug 'haya14busa/incsearch.vim'            " visual incremental search
 Plug 'haya14busa/incsearch-easymotion.vim' " intergration of incsearch and easymotion
+Plug 'yegappan/greplace'                   " global interactive replace
 
 call plug#end()
 
